@@ -23,13 +23,12 @@
 #define Area_H
 
 
-
-#include <allegro.h>
 #include <iostream>
 #include <list>
 #include <vector>
 #include <map>
 #include <cmath>
+#include <allegro.h>
 
 
 /// -----------------------------     AreaBase class     --------------------------------

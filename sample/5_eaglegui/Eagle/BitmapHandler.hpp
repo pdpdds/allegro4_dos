@@ -21,8 +21,6 @@
 #ifndef BitmapHandler_H
 #define BitmapHandler_H
 
-#include <allegro.h>
-
 #include <string>
 
 #include "Eagle/Color.hpp"

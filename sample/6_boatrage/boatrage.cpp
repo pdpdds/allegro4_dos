@@ -162,7 +162,13 @@ int init() {
 	//transparent text drawing
 	text_mode(-1);
 	//set 320x200
+#ifdef _WIN32
 	display.set_graphics_mode(GFX_AUTODETECT_WINDOWED, 8, 320, 200);
+#else
+	/* set a graphics mode sized 320x200 */
+	display.set_graphics_mode(GFX_AUTODETECT, 8, 320, 200);
+#endif
+	
 
 	//tell the user that we're loading the datafile
 	cout << S_LOADING << " boatrage.dat" << endl;
@@ -226,8 +232,11 @@ int init() {
 	map = new tilemap();
 	//show the resolution menu
 	int a = coolmenu(NULL, m_resolution, 7, 2);
-
+#ifdef _WIN32
 	int sw, sh, mode = GFX_AUTODETECT_WINDOWED;
+#else
+	int sw, sh, mode = GFX_AUTODETECT;
+#endif
 	switch (a) {
 	case 0:
 		goto initproceed; //Yuck! A goto! :-(
@@ -246,11 +255,13 @@ int init() {
 	default:
 		sw = 320; sh = 200; break;
 	}
-
+#ifdef _WIN32	
 	//Now set the REAL mode we're gonna use!
 	if (!display.set_graphics_mode(mode, 8, sw, sh)) {
 		alert(S_GFXFAIL1, S_GFXFAIL2, 0, S_OK, 0, S_O, 0);
 	}
+#endif
+
 	//position the menu screen
 	SCR_X = (SCREEN_W - SCR_W) / 2;
 	SCR_Y = (SCREEN_H - SCR_H) / 2;

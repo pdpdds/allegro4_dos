@@ -73,7 +73,11 @@ class screenman {
    if (ret!=0) {
     xres=320; yres=200; coldepth=8;
     set_color_depth(8);
+#ifdef _WIN32
     set_gfx_mode(GFX_AUTODETECT_WINDOWED,xres,yres,0,0);
+#else
+	set_gfx_mode(GFX_AUTODETECT, xres, yres, 0, 0);
+#endif
     set_palette(desktop_palette);
     i=0;
    }

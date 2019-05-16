@@ -9,42 +9,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\6_boatrage\BOATRAGE.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\boatrage.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\control.cc">
+    <ClCompile Include="..\..\..\sample\6_boatrage\control.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\MAPEDIT.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\mapedit.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\MENU.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\menu.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\menumagm.cc">
+    <ClCompile Include="..\..\..\sample\6_boatrage\menumagm.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\OBJECTS.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\objects.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\PLAYER.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\player.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\SPRITE.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\sprite.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\TILEMAP.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\tilemap.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\VIEW.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\view.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\6_boatrage\WRAPPERS.CC">
+    <ClCompile Include="..\..\..\sample\6_boatrage\wrappers.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\sample\6_boatrage\BOATRAGE.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\boatrage.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\sample\6_boatrage\control.h">
@@ -53,34 +53,34 @@
     <ClInclude Include="..\..\..\sample\6_boatrage\data.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\MAPEDIT.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\mapedit.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\MENU.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\menu.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\sample\6_boatrage\menumagm.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\OBJECTS.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\objects.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\PLAYER.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\player.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\SPRITE.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\sprite.h">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\sample\6_boatrage\strings.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\TILEMAP.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\tilemap.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\VIEW.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\view.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\6_boatrage\WRAPPERS.H">
+    <ClInclude Include="..\..\..\sample\6_boatrage\wrappers.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

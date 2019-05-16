@@ -20,17 +20,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_ra2", "3_ra2\ra2.vcxproj
 		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_fox", "4_fox\fox.vcxproj", "{D64EEC38-463D-4B9D-9EE1-016EE37BA598}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_eaglegui", "5_eaglegui\eaglegui.vcxproj", "{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_boatrage", "6_boatrage\boatrage.vcxproj", "{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,20 +97,6 @@ Global
 		{A8B883E4-5233-4F26-B635-47248B3FD1C4}.Static Release, Runtime|x86.Build.0 = Release|Win32
 		{A8B883E4-5233-4F26-B635-47248B3FD1C4}.Static Release|x86.ActiveCfg = Release|Win32
 		{A8B883E4-5233-4F26-B635-47248B3FD1C4}.Static Release|x86.Build.0 = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Debug|x86.ActiveCfg = Debug|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Debug|x86.Build.0 = Debug|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Profile|x86.ActiveCfg = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Profile|x86.Build.0 = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Release|x86.ActiveCfg = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Release|x86.Build.0 = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Debug|x86.ActiveCfg = Debug|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Debug|x86.Build.0 = Debug|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Profile|x86.ActiveCfg = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Profile|x86.Build.0 = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Release, Runtime|x86.ActiveCfg = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Release, Runtime|x86.Build.0 = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Release|x86.ActiveCfg = Release|Win32
-		{D64EEC38-463D-4B9D-9EE1-016EE37BA598}.Static Release|x86.Build.0 = Release|Win32
 		{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}.Debug|x86.ActiveCfg = Debug|Win32
 		{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}.Debug|x86.Build.0 = Debug|Win32
 		{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}.Profile|x86.ActiveCfg = Release|Win32

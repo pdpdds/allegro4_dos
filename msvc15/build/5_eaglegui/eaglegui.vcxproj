@@ -208,7 +208,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <SDLCheck>true</SDLCheck>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <DisableSpecificWarnings>4700;4113;4473;4716;4244;4100;4459;4101;4456;4706;4189</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4702;4700;4113;4473;4716;4244;4100;4459;4101;4456;4706;4189;4290</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>allegro.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>

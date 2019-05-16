@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{61e0a1f9-1352-456a-ad84-16b5e979a02c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{ac2e2b5f-b6a3-4093-8894-82e4ab2827f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BOATRAGE.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="MAPEDIT.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="MENU.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="menumagm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJECTS.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="PLAYER.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="SPRITE.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="strings.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="TILEMAP.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="VIEW.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="WRAPPERS.H">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BOATRAGE.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="control.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="MAPEDIT.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="menumagm.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJECTS.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="PLAYER.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SPRITE.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="TILEMAP.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="VIEW.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="WRAPPERS.CC">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

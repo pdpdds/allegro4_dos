@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AllegroSetup.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\AllegroUtilities.cpp" />
+    <ClCompile Include="src\Area.cpp" />
+    <ClCompile Include="src\BitmapHandler.cpp" />
+    <ClCompile Include="src\BitmapUtility.cpp" />
+    <ClCompile Include="src\Blending.cpp" />
+    <ClCompile Include="src\Blitting.cpp" />
+    <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\Drawing.cpp" />
+    <ClCompile Include="src\Eagle.cpp" />
+    <ClCompile Include="src\EagleCredits.cpp" />
+    <ClCompile Include="src\Error.cpp" />
+    <ClCompile Include="src\FileWork.cpp" />
+    <ClCompile Include="src\GfxModeHandler.cpp" />
+    <ClCompile Include="src\GuiCode\Animation.cpp" />
+    <ClCompile Include="src\GuiCode\BitmapViewer.cpp" />
+    <ClCompile Include="src\GuiCode\ButtonWidget.cpp" />
+    <ClCompile Include="src\GuiCode\Camera.cpp" />
+    <ClCompile Include="src\GuiCode\DropDownList.cpp" />
+    <ClCompile Include="src\GuiCode\FileSelectorDialog.cpp" />
+    <ClCompile Include="src\GuiCode\GfxModeDialog.cpp" />
+    <ClCompile Include="src\GuiCode\IconButton.cpp" />
+    <ClCompile Include="src\GuiCode\ListBox.cpp" />
+    <ClCompile Include="src\GuiCode\MenuWidget.cpp" />
+    <ClCompile Include="src\GuiCode\RadioButtonWidget.cpp" />
+    <ClCompile Include="src\GuiCode\ScrollBarWidget.cpp" />
+    <ClCompile Include="src\GuiCode\SliderWidget.cpp" />
+    <ClCompile Include="src\GuiCode\TabGroup.cpp" />
+    <ClCompile Include="src\GuiCode\TextInput.cpp" />
+    <ClCompile Include="src\GuiCode\TextWidget.cpp" />
+    <ClCompile Include="src\GuiCode\TitleBar.cpp" />
+    <ClCompile Include="src\GuiCode\UtilityWidgets.cpp" />
+    <ClCompile Include="src\GuiCode\WidgetBase.cpp" />
+    <ClCompile Include="src\GuiCode\WidgetColorset.cpp" />
+    <ClCompile Include="src\GuiCode\WidgetHandler.cpp" />
+    <ClCompile Include="src\GuiCode\WidgetMessage.cpp" />
+    <ClCompile Include="src\InputHandler.cpp" />
+    <ClCompile Include="src\key_handler.c" />
+    <ClCompile Include="src\Logging.cpp" />
+    <ClCompile Include="src\Math.cpp" />
+    <ClCompile Include="src\MouseHandler.cpp" />
+    <ClCompile Include="src\Resource.cpp" />
+    <ClCompile Include="src\ResourceRegistry.cpp" />
+    <ClCompile Include="src\Sound.cpp" />
+    <ClCompile Include="src\StringWork.cpp" />
+    <ClCompile Include="src\TestPrograms\AnimationTest.cpp" />
+    <ClCompile Include="src\TestPrograms\Clipboard.c" />
+    <ClCompile Include="src\TestPrograms\DataSyncTest.cpp" />
+    <ClCompile Include="src\TestPrograms\DrawingTest.cpp" />
+    <ClCompile Include="src\TestPrograms\GeneralWidgetTest.cpp" />
+    <ClCompile Include="src\TestPrograms\GuiTest.cpp" />
+    <ClCompile Include="src\TestPrograms\InputHandlerTest.cpp" />
+    <ClCompile Include="src\TestPrograms\RecordInputTest.cpp" />
+    <ClCompile Include="src\TestPrograms\SoundTest.cpp" />
+    <ClCompile Include="src\TextDisplay.cpp" />
+    <ClCompile Include="src\TileMap.cpp" />
+    <ClCompile Include="src\timer_handler.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Eagle.hpp" />
+    <ClInclude Include="include\Eagle\AllegroSetup.hpp" />
+    <ClInclude Include="include\Eagle\AllegroUtilities.hpp" />
+    <ClInclude Include="include\Eagle\Area.hpp" />
+    <ClInclude Include="include\Eagle\BitmapHandler.hpp" />
+    <ClInclude Include="include\Eagle\BitmapUtility.hpp" />
+    <ClInclude Include="include\Eagle\Blending.hpp" />
+    <ClInclude Include="include\Eagle\Blitting.hpp" />
+    <ClInclude Include="include\Eagle\Clipboard.hpp" />
+    <ClInclude Include="include\Eagle\Color.hpp" />
+    <ClInclude Include="include\Eagle\Drawing.hpp" />
+    <ClInclude Include="include\Eagle\EagleCredits.hpp" />
+    <ClInclude Include="include\Eagle\Error.hpp" />
+    <ClInclude Include="include\Eagle\FileWork.hpp" />
+    <ClInclude Include="include\Eagle\GfxModeHandler.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\Animation.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\BitmapViewer.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\ButtonWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\Camera.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\DropDownList.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\FileSelectorDialog.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\GfxModeDialog.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\IconButton.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\ListBox.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\MenuWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\RadioButtonWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\ScrollBarWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\SliderWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\TabGroup.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\TextInput.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\TextWidget.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\TitleBar.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\UtilityWidgets.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\WidgetBase.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\WidgetColorset.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\WidgetHandler.hpp" />
+    <ClInclude Include="include\Eagle\GuiCode\WidgetMessage.hpp" />
+    <ClInclude Include="include\Eagle\InputHandler.hpp" />
+    <ClInclude Include="include\Eagle\key_handler.h" />
+    <ClInclude Include="include\Eagle\Logging.hpp" />
+    <ClInclude Include="include\Eagle\Math.hpp" />
+    <ClInclude Include="include\Eagle\MouseHandler.hpp" />
+    <ClInclude Include="include\Eagle\MultiArray.hpp" />
+    <ClInclude Include="include\Eagle\Resource.hpp" />
+    <ClInclude Include="include\Eagle\ResourceRegistry.hpp" />
+    <ClInclude Include="include\Eagle\Sound.hpp" />
+    <ClInclude Include="include\Eagle\StringWork.hpp" />
+    <ClInclude Include="include\Eagle\TextDisplay.hpp" />
+    <ClInclude Include="include\Eagle\TextEntryWidget.hpp" />
+    <ClInclude Include="include\Eagle\TileMap.hpp" />
+    <ClInclude Include="include\Eagle\timer_handler.h" />
+    <ClInclude Include="src\TestPrograms\AnimationTest.hpp" />
+    <ClInclude Include="src\TestPrograms\Clipboard.h" />
+    <ClInclude Include="src\TestPrograms\DataSyncTest.hpp" />
+    <ClInclude Include="src\TestPrograms\DrawingTest.hpp" />
+    <ClInclude Include="src\TestPrograms\GeneralWidgetTest.hpp" />
+    <ClInclude Include="src\TestPrograms\InputHandlerTest.hpp" />
+    <ClInclude Include="src\TestPrograms\RecordInputTest.hpp" />
+    <ClInclude Include="src\TestPrograms\SoundTest.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}</ProjectGuid>
+    <RootNamespace>ex12bit</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>05_eaglegui</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\examples\</OutDir>
+    <IntDir>..\..\..\obj\msvc\alleg\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./lib/win32;./lib/fastsqrt;./lib/sxmlc;./lib/coll-c/include;.;..\..\..\;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_X86_;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\lib\msvc\alleg.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./include;.;..\..\;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SDLCheck>true</SDLCheck>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DisableSpecificWarnings>4700;4113;4473;4716;4244;4100;4459;4101;4456;4706;4189</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>allegro.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>false</MapExports>
+      <AdditionalLibraryDirectories>..\debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

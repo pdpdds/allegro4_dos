@@ -1,0 +1,29 @@
+QueryAvailableTargets info : selection owner window's name : 
+QueryAvailableTargets : 4 targets available :
+   TARGETS
+   TIMESTAMP
+   MULTIPLE
+   STRING
+QueryAvailableTargets info : selection owner window's name : 
+QueryAvailableTargets : 4 targets available :
+   TARGETS
+   TIMESTAMP
+   MULTIPLE
+   STRING
+QueryAvailableTargets info : selection owner window's name : Terminal
+QueryAvailableTargets : 9 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING
+   text/plain;charset=utf-8
+   text/plain
+Selection Request received from main - requested target : TARGETS
+Selection Request received from nautilus - requested target : TARGETS
+Selection Request received from nautilus - requested target : TARGETS
+Selection Request received from  - requested target : TARGETS
+Selection Request received from  - requested target : STRING
+Selection Request received from  - requested target : TARGETS

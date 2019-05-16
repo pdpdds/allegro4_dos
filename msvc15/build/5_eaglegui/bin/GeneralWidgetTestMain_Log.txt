@@ -1,0 +1,36 @@
+General Widget Test
+
+
+$$$ Allegro initialization successful.
+$$$ Close button callback successfully set.
+Checking 32 1 1
+$$$ Desktop resolution and color depth determined to be 2560 X 1080 X 32
+$$$ Allegro keyboard initialization successful.
+$$$ Allegro timer initialization successful.
+$$$ Allegro mouse initialization successful. The mouse in use has 3 buttons.
+
+Gfx_mode_handler attempting new mode...
+
+Starting change_res(2 (GFX_AUTODETECT_WINDOWED) , 800 , 600 , 32 , mode = CRM_DIRECT)
+    Success changing to new resolution
+GfxModeHandler : Successfully set the SW_BACKGROUND display switch mode.
+GfxModeHandler : Current display switch mode is SWITCH_BACKGROUND
+GfxModeHandler : Successfully set the display callback in.
+GfxModeHandler : Successfully set the display callback out.
+Change Mode Flags : FULL_SUCCESS
+CCC
+TTT
+
+viewer_pic : W = 1024 , H = 768
+The name of the executable file running is 'D:\djgpp\msvc15\build\5_eaglegui\..\Debug\05_eaglegui.exe'
+argv[0] is 'D:\djgpp\msvc15\build\5_eaglegui\..\Debug\05_eaglegui.exe'
+The executable file running exists
+The c:\ctwoplus folder does not exist
+s is 'a'
+GfxModeHandler : Program lost window focus.
+GfxModeHandler : Program regained window focus.
+GfxModeHandler : Program lost window focus.
+GfxModeHandler : Program regained window focus.
+Rectangular Spring Button 1 pressed.
+Circular Spring Button 2 pressed.
+DIALOG_CLOSE message sent from : 004FCA9C

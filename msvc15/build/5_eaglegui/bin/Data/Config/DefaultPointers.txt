@@ -1,0 +1,18 @@
+SPRITESHEET
+Data/Images/MousePointers1.bmp
+SIZE
+20 20
+NUMBER
+11
+OFFSETS
+1 1
+10 10
+9 9
+9 10
+8 10
+8 10
+8 10
+10 10
+9 10
+9 10
+9 11

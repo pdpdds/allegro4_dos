@@ -1,0 +1,44 @@
+Sound Test
+
+
+$$$ Allegro initialization successful.
+$$$ Close button callback successfully set.
+$$$ Desktop resolution and color depth determined to be 2560 X 1080 X 32
+$$$ Allegro keyboard initialization successful.
+$$$ Allegro timer initialization successful.
+$$$ Allegro mouse initialization successful. The mouse in use has 3 buttons.
+
+Mixer quality is 2
+Mixer frequency is 44100
+Mixer bit depth is 16
+Mixer channels is 2
+Number of mixer voices is 8
+Mixer buffer length is 256
+Gfx_mode_handler attempting new mode...
+
+Starting change_res(2 (GFX_AUTODETECT_WINDOWED) , 800 , 600 , 32 , mode = CRM_DIRECT)
+    Success changing to new resolution
+GfxModeHandler : Successfully set the SW_BACKGROUND display switch mode.
+GfxModeHandler : Current display switch mode is SWITCH_BACKGROUND
+GfxModeHandler : Successfully set the display callback in.
+GfxModeHandler : Successfully set the display callback out.
+Change Mode Flags : FULL_SUCCESS
+Voice #0 allocated to play Sound1.
+Voice #1 allocated to play Sound1.
+Voice #2 allocated to play Sound2.
+Voice #3 allocated to play Sound2.
+Voice #4 allocated to play Sound2.
+Voice #5 allocated to play Sound2.
+Voice #6 allocated to play Sound3.
+Voice #7 allocated to play Sound3.
+Voice #0 allocated to play Sound3.
+Voice #1 allocated to play Sound3.
+Voice #2 allocated to play Sound2.
+Voice #0 allocated to play Sound4.
+Voice #1 allocated to play Sound5.
+Voice #0 allocated to play Sound6.
+Voice #2 allocated to play Sound7.
+Voice #0 allocated to play Sound7.
+Voice #1 allocated to play Sound6.
+Voice #2 allocated to play Sound6.
+GfxModeHandler : Program lost window focus.

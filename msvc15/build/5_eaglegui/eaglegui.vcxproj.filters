@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{61e0a1f9-1352-456a-ad84-16b5e979a02c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{ac2e2b5f-b6a3-4093-8894-82e4ab2827f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\eagle">
+      <UniqueIdentifier>{fb4018c9-fbbe-481d-be68-f1c30b0f7e0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\eagle\guicode">
+      <UniqueIdentifier>{6f9fc22d-a3f4-4f82-889b-98116709c814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\guicode">
+      <UniqueIdentifier>{74031d1d-a4d3-498f-9a2a-d3c480e219ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AllegroSetup.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AllegroUtilities.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Area.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BitmapHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BitmapUtility.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Blending.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Blitting.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Color.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Drawing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Eagle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EagleCredits.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Error.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileWork.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GfxModeHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\key_handler.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Logging.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MouseHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Resource.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResourceRegistry.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sound.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StringWork.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextDisplay.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TileMap.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timer_handler.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\Animation.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\BitmapViewer.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\ButtonWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\Camera.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\DropDownList.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\FileSelectorDialog.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\GfxModeDialog.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\IconButton.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\ListBox.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\MenuWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\RadioButtonWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\ScrollBarWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\SliderWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\TabGroup.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\TextInput.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\TextWidget.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\TitleBar.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\UtilityWidgets.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\WidgetBase.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\WidgetColorset.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\WidgetHandler.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiCode\WidgetMessage.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TestPrograms\GeneralWidgetTest.cpp" />
+    <ClCompile Include="src\TestPrograms\AnimationTest.cpp" />
+    <ClCompile Include="src\TestPrograms\Clipboard.c" />
+    <ClCompile Include="src\TestPrograms\DataSyncTest.cpp" />
+    <ClCompile Include="src\TestPrograms\DrawingTest.cpp" />
+    <ClCompile Include="src\TestPrograms\InputHandlerTest.cpp" />
+    <ClCompile Include="src\TestPrograms\RecordInputTest.cpp" />
+    <ClCompile Include="src\TestPrograms\SoundTest.cpp" />
+    <ClCompile Include="src\TestPrograms\GuiTest.cpp">
+      <Filter>src\guicode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Eagle.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\AllegroSetup.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\AllegroUtilities.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Area.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\BitmapHandler.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\BitmapUtility.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Blending.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Blitting.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Clipboard.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Color.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Drawing.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\EagleCredits.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Error.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\FileWork.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GfxModeHandler.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\InputHandler.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\key_handler.h">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Logging.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Math.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\MouseHandler.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\MultiArray.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Resource.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\ResourceRegistry.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\Sound.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\StringWork.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\TextDisplay.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\TextEntryWidget.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\TileMap.hpp">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\timer_handler.h">
+      <Filter>include\eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\Animation.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\BitmapViewer.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\ButtonWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\Camera.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\DropDownList.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\FileSelectorDialog.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\GfxModeDialog.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\IconButton.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\ListBox.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\MenuWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\RadioButtonWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\ScrollBarWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\SliderWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\TabGroup.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\TextInput.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\TextWidget.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\TitleBar.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\UtilityWidgets.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\WidgetBase.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\WidgetColorset.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\WidgetHandler.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Eagle\GuiCode\WidgetMessage.hpp">
+      <Filter>include\eagle\guicode</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TestPrograms\AnimationTest.hpp" />
+    <ClInclude Include="src\TestPrograms\Clipboard.h" />
+    <ClInclude Include="src\TestPrograms\DataSyncTest.hpp" />
+    <ClInclude Include="src\TestPrograms\DrawingTest.hpp" />
+    <ClInclude Include="src\TestPrograms\GeneralWidgetTest.hpp" />
+    <ClInclude Include="src\TestPrograms\InputHandlerTest.hpp" />
+    <ClInclude Include="src\TestPrograms\RecordInputTest.hpp" />
+    <ClInclude Include="src\TestPrograms\SoundTest.hpp" />
+  </ItemGroup>
+</Project>

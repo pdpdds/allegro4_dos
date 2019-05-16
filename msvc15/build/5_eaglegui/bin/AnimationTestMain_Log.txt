@@ -1,0 +1,36 @@
+Animation Test
+
+
+$$$ Allegro initialization successful.
+$$$ Close button callback successfully set.
+$$$ Desktop resolution and color depth determined to be 2560 X 1080 X 32
+$$$ Allegro keyboard initialization successful.
+$$$ Allegro timer initialization successful.
+$$$ Allegro mouse initialization successful. The mouse in use has 3 buttons.
+
+Gfx_mode_handler attempting new mode...
+
+Starting change_res(2 (GFX_AUTODETECT_WINDOWED) , 800 , 600 , 32 , mode = CRM_DIRECT)
+    Success changing to new resolution
+GfxModeHandler : Successfully set the SW_BACKGROUND display switch mode.
+GfxModeHandler : Current display switch mode is SWITCH_BACKGROUND
+GfxModeHandler : Successfully set the display callback in.
+GfxModeHandler : Successfully set the display callback out.
+Change Mode Flags : FULL_SUCCESS
+Running Eagle credits #1
+Running Eagle credits #2
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #2
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+Running Eagle credits #3
+GfxModeHandler : Program lost window focus.

@@ -1,0 +1,129 @@
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 7 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 7 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from xfdesktop - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from Firefox - requested target : TARGETS
+Selection Request received from Firefox - requested target : TARGETS
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 7 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING
+QueryAvailableTargets info : selection owner window's name : 
+QueryAvailableTargets : 4 targets available :
+   TARGETS
+   TIMESTAMP
+   MULTIPLE
+   STRING
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from xfdesktop - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from  - requested target : TARGETS
+Selection Request received from  - requested target : STRING
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 7 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING
+QueryAvailableTargets info : selection owner window's name : 
+QueryAvailableTargets : 4 targets available :
+   TARGETS
+   TIMESTAMP
+   MULTIPLE
+   STRING
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from xfdesktop - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from  - requested target : TARGETS
+Selection Request received from  - requested target : STRING
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+Selection Request received from konqueror - requested target : TARGETS
+QueryAvailableTargets info : selection owner window's name : kolourpaint
+QueryAvailableTargets : 28 targets available :
+   application/x-kolourpaint-selection-400
+   application/x-qt-image
+   image/png
+   image/bw
+   image/eps
+   image/epsf
+   image/epsi
+   image/pcx
+   image/rgb
+   image/rgba
+   image/sgi
+   image/tga
+   image/bmp
+   image/ico
+   image/jp2
+   image/jpeg
+   image/jpg
+   image/ppm
+   PIXMAP
+   image/tif
+   image/tiff
+   image/xbm
+   image/xpm
+   image/xv
+   TARGETS
+   MULTIPLE
+   TIMESTAMP
+   SAVE_TARGETS
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 7 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   UTF8_STRING
+   COMPOUND_TEXT
+   TEXT
+   STRING

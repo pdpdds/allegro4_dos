@@ -1,0 +1,28 @@
+
+
+
+Allegro handles linux events in a function called _xwin_private_process_event. It's located in allegro\src\x\xwin.c on line 2307.
+Allegro handles linux events in a function called _xdga2_handle_input. It's located in allegro\src\x\xdga2.c on line 272.
+
+
+Steps to hack Allegro for Linux based clipboard :
+   1. Get a handle to the _xwin object by including <xalleg.h>
+   2. Use the Display* _xwin.display and the Window _xwin.window when necessary.
+   3. 
+
+
+Look into these functions for use in xcsi :
+   XExtendedMaxRequestSize
+   XMaxRequestSize
+
+When a SelectionRequest is received, the returned SelectionNotify event should have :
+   "The requestor, selection, time, and target arguments will be the same as those on the ConvertSelection request."
+
+Notes for Linux version, xcsi :
+
+1) function gtk_request_clipboard_contents in gtk\gtkclipboard.c line 891
+
+2) function gtk_selection_convert in gtk\gtkselection.c line 1019
+
+3) function gdk_selection_convert in gdk\x11\gdkselection-x11.c line 226
+

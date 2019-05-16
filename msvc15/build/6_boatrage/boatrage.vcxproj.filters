@@ -9,79 +9,79 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BOATRAGE.H">
+    <ClCompile Include="..\..\..\sample\6_boatrage\BOATRAGE.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="control.h">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\control.cc">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="data.h">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\MAPEDIT.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="MAPEDIT.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\MENU.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="MENU.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\menumagm.cc">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="menumagm.h">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\OBJECTS.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="OBJECTS.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\PLAYER.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="PLAYER.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\SPRITE.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="SPRITE.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\TILEMAP.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="strings.h">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\VIEW.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="TILEMAP.H">
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\6_boatrage\WRAPPERS.CC">
       <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="VIEW.H">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="WRAPPERS.H">
-      <Filter>src</Filter>
-    </ClInclude>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOATRAGE.CC">
+    <ClInclude Include="..\..\..\sample\6_boatrage\BOATRAGE.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="control.cc">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\control.h">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="MAPEDIT.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\data.h">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="MENU.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\MAPEDIT.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="menumagm.cc">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\MENU.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="OBJECTS.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\menumagm.h">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="PLAYER.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\OBJECTS.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="SPRITE.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\PLAYER.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="TILEMAP.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\SPRITE.H">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="VIEW.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\strings.h">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="WRAPPERS.CC">
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\TILEMAP.H">
       <Filter>src</Filter>
-    </ClCompile>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\VIEW.H">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\6_boatrage\WRAPPERS.H">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

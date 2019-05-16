@@ -11,32 +11,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BOATRAGE.H" />
-    <ClInclude Include="control.h" />
-    <ClInclude Include="data.h" />
-    <ClInclude Include="MAPEDIT.H" />
-    <ClInclude Include="MENU.H" />
-    <ClInclude Include="menumagm.h" />
-    <ClInclude Include="OBJECTS.H" />
-    <ClInclude Include="PLAYER.H" />
-    <ClInclude Include="SPRITE.H" />
-    <ClInclude Include="strings.h" />
-    <ClInclude Include="TILEMAP.H" />
-    <ClInclude Include="VIEW.H" />
-    <ClInclude Include="WRAPPERS.H" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\BOATRAGE.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\control.cc" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\MAPEDIT.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\MENU.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\menumagm.cc" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\OBJECTS.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\PLAYER.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\SPRITE.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\TILEMAP.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\VIEW.CC" />
+    <ClCompile Include="..\..\..\sample\6_boatrage\WRAPPERS.CC" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOATRAGE.CC" />
-    <ClCompile Include="control.cc" />
-    <ClCompile Include="MAPEDIT.CC" />
-    <ClCompile Include="MENU.CC" />
-    <ClCompile Include="menumagm.cc" />
-    <ClCompile Include="OBJECTS.CC" />
-    <ClCompile Include="PLAYER.CC" />
-    <ClCompile Include="SPRITE.CC" />
-    <ClCompile Include="TILEMAP.CC" />
-    <ClCompile Include="VIEW.CC" />
-    <ClCompile Include="WRAPPERS.CC" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\BOATRAGE.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\control.h" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\data.h" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\MAPEDIT.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\MENU.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\menumagm.h" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\OBJECTS.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\PLAYER.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\SPRITE.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\strings.h" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\TILEMAP.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\VIEW.H" />
+    <ClInclude Include="..\..\..\sample\6_boatrage\WRAPPERS.H" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}</ProjectGuid>

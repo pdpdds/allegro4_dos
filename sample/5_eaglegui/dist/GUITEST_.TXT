@@ -1,0 +1,17 @@
+Main Gui Test
+
+
+Argrument #0 'c:/dist/a.exe'
+Usage :
+The -x switch is followed by a second argument with the name or 
+number of the test program you wish to run.
+Valid program names and numbers are : 
+   0 - DataSyncTest
+   1 - InputHandlerTest
+   2 - RecordInputTest
+   3 - GeneralWidgetTest
+   4 - DrawingTest
+   5 - SoundTest
+   6 - AnimationTest
+Default program is 3 - GeneralWidgetTest
+Launching default program.

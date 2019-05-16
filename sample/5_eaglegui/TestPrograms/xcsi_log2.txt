@@ -1,0 +1,29 @@
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 13 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   SAVE_TARGETS
+   image/png
+   image/jpeg
+   image/tiff
+   image/x-icon
+   image/x-ico
+   image/x-win-bitmap
+   image/bmp
+   image/x-bmp
+   image/x-MS-bmp
+QueryAvailableTargets info : selection owner window's name : Firefox
+QueryAvailableTargets : 12 targets available :
+   TIMESTAMP
+   TARGETS
+   MULTIPLE
+   image/png
+   image/jpeg
+   image/tiff
+   image/x-icon
+   image/x-ico
+   image/x-win-bitmap
+   image/bmp
+   image/x-bmp
+   image/x-MS-bmp

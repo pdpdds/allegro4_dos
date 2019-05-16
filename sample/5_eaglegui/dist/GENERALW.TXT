@@ -1,0 +1,29 @@
+General Widget Test
+
+
+$$$ Allegro initialization successful.
+### Could not set close button callback function.
+Checking 8 1 1
+$$$ Desktop resolution and color depth determined to be 320 X 200 X 8
+$$$ Allegro keyboard initialization successful.
+$$$ Allegro timer initialization successful.
+$$$ Allegro mouse initialization successful. The mouse in use has 3 buttons.
+
+Loading pointers failed...
+viewer_pic : W = 1024 , H = 768
+The name of the executable file running is 'c:/dist/a.exe'
+argv[0] is 'c:/dist/a.exe'
+The executable file running exists
+The c:\ctwoplus folder does not exist
+s is 'a'
+radio_btn2::QueueUserMessage received : WidgetMsg : From widget (0x2f1894) , Name = rb2itema , Topic = TOPIC_BUTTON_WIDGET , Message = BUTTON_TOGGLED
+   rbi is 0x2f188c
+Radio button #2 - 'Invisible' selected.
+radio_btn2::QueueUserMessage received : WidgetMsg : From widget (0x2f1894) , Name = rb2itema , Topic = TOPIC_BUTTON_WIDGET , Message = BUTTON_TOGGLED
+   rbi is 0x2f188c
+radio_btn2::QueueUserMessage received : WidgetMsg : From widget (0x2f195c) , Name = rb2itemb , Topic = TOPIC_BUTTON_WIDGET , Message = BUTTON_TOGGLED
+   rbi is 0x2f1954
+Radio button #2 - 'Highlight Outline' selected.
+radio_btn2::QueueUserMessage received : WidgetMsg : From widget (0x2f1894) , Name = rb2itema , Topic = TOPIC_BUTTON_WIDGET , Message = BUTTON_TOGGLED
+   rbi is 0x2f188c
+Radio button #2 - 'Invisible' selected.

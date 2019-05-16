@@ -1,4 +1,0 @@
-//MAPEDIT.H
-
-
-void mapedit();

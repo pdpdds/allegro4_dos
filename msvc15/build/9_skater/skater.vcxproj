@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\sample\9_skater\source\anim.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\backscrl.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\credits.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\dblbuf.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\fps.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\framewk.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\gamepad.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\game_sk.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\global.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\intro.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\kbd_sk.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\level.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\lvlalloc.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\lvlfile.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\lvlstate.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menu.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menuabt.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menuctl.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menugfx.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menumain.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menumisc.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menuopts.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menusnd.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\menusucc.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\music.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\oglflip.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\pageflip.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\physics.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\quadtree.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\scrshot.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\skater.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\token.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\transitn.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\tribuf.c" />
+    <ClCompile Include="..\..\..\sample\9_skater\source\virtctl.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sample\9_skater\include\anim.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\backscrl.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\credits.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\dblbuf.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\defines.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\demodata.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\fps.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\framewk.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\game.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\gamepad.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\global.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\gmestate.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\keyboard.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\level.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\lvlalloc.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\lvlfile.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\menu.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\menus.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\music.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\oglflip.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\pageflip.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\physics.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\quadtree.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\scrshot.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\token.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\transitn.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\tribuf.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\updtedvr.h" />
+    <ClInclude Include="..\..\..\sample\9_skater\include\virtctl.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{07FAC67D-5D09-4EAF-8445-C1DFAB7DCCAE}</ProjectGuid>
+    <RootNamespace>ex12bit</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>09_skater</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>allegro.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\include;../../../../sample/9_skater/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SDLCheck>true</SDLCheck>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>allegro.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>false</MapExports>
+      <AdditionalLibraryDirectories>..\debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

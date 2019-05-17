@@ -12,10 +12,15 @@ TBEngine::TBEngine(int w, int h)
 	this->h = h;
 	this->full = false;
 	allegro_init();
-	set_color_depth(32);
-	set_gfx_mode(GFX_AUTODETECT_WINDOWED, w, h, 0, 0);
+	set_color_depth(32);	
 	install_keyboard();
 	install_mouse();
+
+#ifdef _WIN32
+	set_gfx_mode(GFX_AUTODETECT_WINDOWED, w, h, 0, 0);
+#else
+	set_gfx_mode(GFX_AUTODETECT, w, h, 0, 0);
+#endif
 	enable_hardware_cursor();
 	select_mouse_cursor(MOUSE_CURSOR_ARROW);
 	show_mouse(screen);

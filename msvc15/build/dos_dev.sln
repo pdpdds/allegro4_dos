@@ -3,34 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "allegro", "allegro_win32\allegro\allegro.vcxproj", "{0889308C-5366-4685-B527-B983DB3E1930}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_helloworld", "1_helloworld\helloworld.vcxproj", "{76EBC34E-440F-4E61-B08B-5D2629C370F3}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_pong", "2_pong\pong.vcxproj", "{769FA81C-FF54-440A-882A-88FAFE372774}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_ra2", "3_ra2\ra2.vcxproj", "{A8B883E4-5233-4F26-B635-47248B3FD1C4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_eaglegui", "5_eaglegui\eaglegui.vcxproj", "{E7D8C56F-1097-4C8A-B911-CA677D4E37F9}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_boatrage", "6_boatrage\boatrage.vcxproj", "{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_tetris", "4_tetris\tetris.vcxproj", "{41689C9C-BB22-4576-92C3-1648CC8C3EA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_striker", "7_striker\striker.vcxproj", "{DF0220A7-7203-4058-B500-0A1FBB45E075}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,20 +28,6 @@ Global
 		Static Release|x86 = Static Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0889308C-5366-4685-B527-B983DB3E1930}.Debug|x86.ActiveCfg = Debug|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Debug|x86.Build.0 = Debug|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Profile|x86.ActiveCfg = Profile|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Profile|x86.Build.0 = Profile|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Release|x86.ActiveCfg = Release|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Release|x86.Build.0 = Release|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Debug|x86.ActiveCfg = Static Debug|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Debug|x86.Build.0 = Static Debug|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Profile|x86.ActiveCfg = Static Profile|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Profile|x86.Build.0 = Static Profile|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Release, Runtime|x86.ActiveCfg = Static Release, Runtime|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Release, Runtime|x86.Build.0 = Static Release, Runtime|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Release|x86.ActiveCfg = Static Release|Win32
-		{0889308C-5366-4685-B527-B983DB3E1930}.Static Release|x86.Build.0 = Static Release|Win32
 		{76EBC34E-440F-4E61-B08B-5D2629C370F3}.Debug|x86.ActiveCfg = Debug|Win32
 		{76EBC34E-440F-4E61-B08B-5D2629C370F3}.Debug|x86.Build.0 = Debug|Win32
 		{76EBC34E-440F-4E61-B08B-5D2629C370F3}.Profile|x86.ActiveCfg = Release|Win32
@@ -141,6 +112,20 @@ Global
 		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release, Runtime|x86.Build.0 = Release|Win32
 		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release|x86.ActiveCfg = Release|Win32
 		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release|x86.Build.0 = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Debug|x86.ActiveCfg = Debug|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Debug|x86.Build.0 = Debug|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Profile|x86.ActiveCfg = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Profile|x86.Build.0 = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Release|x86.ActiveCfg = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Release|x86.Build.0 = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Debug|x86.ActiveCfg = Debug|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Debug|x86.Build.0 = Debug|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Profile|x86.ActiveCfg = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Profile|x86.Build.0 = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Release, Runtime|x86.ActiveCfg = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Release, Runtime|x86.Build.0 = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Release|x86.ActiveCfg = Release|Win32
+		{DF0220A7-7203-4058-B500-0A1FBB45E075}.Static Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

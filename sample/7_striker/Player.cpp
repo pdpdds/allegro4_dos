@@ -16,6 +16,7 @@ Player::Player(BITMAP* image, int spriteX, int spriteY, int frame_width, int fra
     maxHealth = 100;
     SetHealth(100);
     currentArmour = 0;
+
     box = new BoundingBox(position.x-frame_width*3/8, position.x+frame_width*3/8,position.y ,position.y+frame_height/2);
 }
 
@@ -47,7 +48,7 @@ void Player::CreateArmour(int currentArmour)
 
 void Player::Draw(BITMAP* buffer, bool debug)
 {
-    masked_blit(image, buffer, 0, 0, position.x-frame_width/2,position.y-frame_height/2, frame_width,frame_height);
+	masked_stretch_blit(image, buffer, 0, 0, frame_width, frame_height, position.x-frame_width/4,position.y-frame_height/4, frame_width/2,frame_height/2);
 
     if (currentArmour > 0)
     {
@@ -80,14 +81,14 @@ void Player::Move(float x, float y)
 {
     position.x = position.x + x;
     position.y = position.y + y;
-    if(position.x<0)
+    if(position.x<GetFrameWidth()/2)
     {
-        position.x = 0;
+        position.x = GetFrameWidth()/2;
     }
 
-    if(position.x>SCREEN_W - GetFrameWidth())
+    if(position.x>SCREEN_W - GetFrameWidth()/2)
     {
-        position.x = SCREEN_W - GetFrameWidth();
+        position.x = SCREEN_W - GetFrameWidth()/2;
     }
 
     if(position.y<0)

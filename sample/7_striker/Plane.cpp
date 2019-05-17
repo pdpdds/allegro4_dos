@@ -30,7 +30,7 @@ Plane::Plane(BITMAP* image, int spriteX, int spriteY, int frame_width, int frame
 {
     this->frame_width = frame_width;
     this->frame_height = frame_height;
-    this->image = create_sub_bitmap(image, spriteX, spriteY, frame_width, frame_height);
+    this->image = create_sub_bitmap(image, spriteX, spriteY, frame_width, frame_height);	
     this->position.x = x;
     this->position.y = y;
     this->type = type;

@@ -21,6 +21,10 @@ END_OF_FUNCTION(increment_speed_counter);
 const int move_factor = 3;
 Player* player;
 
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
+#define DOS_SCREEN_WIDTH 320
+#define DOS_SCREEN_HEIGHT 200
 
 void CreateObjects(LinkedList*, BITMAP*);
 
@@ -53,20 +57,26 @@ int main(int argc, char* argv[])
     LOCK_FUNCTION(increment_speed_counter);
     install_int_ex(increment_speed_counter, BPS_TO_TIMER(60));//Set our BPS	
 
+											
+
 #ifdef _WIN32
 
-	//set graphics mode, trying all acceptable depths
+															  //set graphics mode, trying all acceptable depths
 	set_color_depth(32);
 
 	int w, h;
 	get_desktop_resolution(&w, &h);
 	set_color_depth(desktop_color_depth());
 
-	set_gfx_mode(GFX_SAFE, 800, 600, 0, 0);
+	set_gfx_mode(GFX_SAFE, DOS_SCREEN_WIDTH, DOS_SCREEN_HEIGHT, 0, 0);
 	BITMAP* buffer = create_bitmap(SCREEN_W, 640);
 #else
-	set_gfx_mode(GFX_AUTODETECT, 320, 200, 0, 0);
+	set_gfx_mode(GFX_AUTODETECT, DOS_SCREEN_WIDTH, DOS_SCREEN_HEIGHT, 0, 0);
 	BITMAP* buffer = create_bitmap(screen->w, screen->h);
+	if (!buffer) {
+		allegro_message("Failed to create double buffer. Out of memory?");
+		exit(1);
+	}
 #endif	
 	
 	/*Plane Image*/
@@ -80,14 +90,23 @@ int main(int argc, char* argv[])
     SAMPLE *fireSound = load_sample("Sounds/fireSound.wav");
 
 
-    LinkedList* objects = new LinkedList(gameSprite);
-
+    LinkedList* objects = new LinkedList(gameSprite);	
     //player = new Player(gameSprite, 64, 64, SCREEN_W/2, SCREEN_H - 96);
-    player = new Player(gameSprite, 0, 0, 64, 64, SCREEN_W/2, SCREEN_H - 96, 0);
+#ifdef _WIN32	
+	player = new Player(gameSprite, 0, 0, 64, 64, SCREEN_W / 2, SCREEN_H - 96, 0);
+#else
+	/* set the color palette */
+    set_palette(desktop_palette);
+
+    /* clear the screen to white */
+    clear_to_color(screen, makecol(255, 255, 255));    
+	player = new Player(gameSprite, 0, 0, 64, 64, screen->w / 2, screen->h - 96, 0);		
+#endif // _WIN32
+	
     objects->Append(player);
+	
     HealthBar* healthBar = new HealthBar(gameSprite,1,1);
-
-
+	
 
     Terrain* terrainTop = new Terrain(gameSprite, 0, -640, 0, 0);
     Terrain* terrainBottom = new Terrain(gameSprite, 0, 0, 0, 0);

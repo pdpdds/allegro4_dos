@@ -30,6 +30,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_boatrage", "6_boatrage\b
 		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_tetris", "4_tetris\tetris.vcxproj", "{41689C9C-BB22-4576-92C3-1648CC8C3EA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -125,6 +127,20 @@ Global
 		{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}.Static Release, Runtime|x86.Build.0 = Release|Win32
 		{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}.Static Release|x86.ActiveCfg = Release|Win32
 		{FCE12BCC-8C48-4C88-8554-1618B17DEBA2}.Static Release|x86.Build.0 = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Debug|x86.Build.0 = Debug|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Profile|x86.ActiveCfg = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Profile|x86.Build.0 = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Release|x86.ActiveCfg = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Release|x86.Build.0 = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Debug|x86.ActiveCfg = Debug|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Debug|x86.Build.0 = Debug|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Profile|x86.ActiveCfg = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Profile|x86.Build.0 = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release, Runtime|x86.ActiveCfg = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release, Runtime|x86.Build.0 = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release|x86.ActiveCfg = Release|Win32
+		{41689C9C-BB22-4576-92C3-1648CC8C3EA8}.Static Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

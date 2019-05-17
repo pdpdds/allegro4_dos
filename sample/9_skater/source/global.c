@@ -164,6 +164,9 @@ int change_gfx_mode(void)
    }
 #endif
 
+#ifndef _WIN32
+   gfx_mode = GFX_AUTODETECT;
+#endif
 
 #ifdef DEMO_USE_ALLEGRO_GL
    /* AllegroGL has its own way to set GFX options. */

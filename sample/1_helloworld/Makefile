@@ -1,5 +1,5 @@
-CFLAGS = -I. -I..\allegro\include
-LDFLAGS = -L..\allegro\lib
+CFLAGS = -I. -I..\\..\allegro\include
+LDFLAGS = -L..\..\allegro\lib
 
 # -------- 실행 프로그램 이름 입력 --------
 PROGRAM = main

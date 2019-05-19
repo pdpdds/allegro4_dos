@@ -51,7 +51,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_tbengine", "10_tbengine\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_donkey", "11_donkey\donkey.vcxproj", "{85C837F8-88F6-4CE8-9C40-80D1C5FF4EA3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_xgdp", "12_xdgp\xdgp.vcxproj", "{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_xdgp", "12_xdgp\xdgp.vcxproj", "{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_tank", "13_tank\tank.vcxproj", "{E4838C38-3532-40A4-9407-2F30A53F65CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,6 +248,20 @@ Global
 		{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}.Static Release, Runtime|x86.Build.0 = Release|Win32
 		{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}.Static Release|x86.ActiveCfg = Release|Win32
 		{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}.Static Release|x86.Build.0 = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Debug|x86.Build.0 = Debug|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Profile|x86.ActiveCfg = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Profile|x86.Build.0 = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Release|x86.ActiveCfg = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Release|x86.Build.0 = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Debug|x86.ActiveCfg = Debug|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Debug|x86.Build.0 = Debug|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Profile|x86.ActiveCfg = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Profile|x86.Build.0 = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Release, Runtime|x86.ActiveCfg = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Release, Runtime|x86.Build.0 = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Release|x86.ActiveCfg = Release|Win32
+		{E4838C38-3532-40A4-9407-2F30A53F65CB}.Static Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

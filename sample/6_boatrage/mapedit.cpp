@@ -173,7 +173,7 @@ void editmap() {
  BITMAP *tools=display.subbitmap(0,display.h()-26,display.w(),26);
  FONT *nfont=(FONT *)d(FONT_SMALL);
 
- view *mapview=new view(viewbitmap); //de tv† vyerna
+ view *mapview=new view(viewbitmap); //de tv?vyerna
  editcursor *cur;
  int i,curtile=0,quit=0,a;
  int tool=0;

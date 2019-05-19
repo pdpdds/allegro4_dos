@@ -9,33 +9,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\4_tetris\gra.cpp">
+    <ClCompile Include="..\..\..\sample\4_tetris\src\gra.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\4_tetris\main.cpp">
+    <ClCompile Include="..\..\..\sample\4_tetris\src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\4_tetris\rozgrywka.cpp">
+    <ClCompile Include="..\..\..\sample\4_tetris\src\rozgrywka.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\4_tetris\silnik.cpp">
+    <ClCompile Include="..\..\..\sample\4_tetris\src\silnik.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\4_tetris\start.cpp">
+    <ClCompile Include="..\..\..\sample\4_tetris\src\start.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\sample\4_tetris\gra.h">
+    <ClInclude Include="..\..\..\sample\4_tetris\src\gra.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\4_tetris\rozgrywka.h">
+    <ClInclude Include="..\..\..\sample\4_tetris\src\rozgrywka.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\4_tetris\silnik.h">
+    <ClInclude Include="..\..\..\sample\4_tetris\src\silnik.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\4_tetris\start.h">
+    <ClInclude Include="..\..\..\sample\4_tetris\src\start.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 	get_desktop_resolution(&w, &h);
 	set_color_depth(desktop_color_depth());
 
-	set_gfx_mode(GFX_SAFE, DOS_SCREEN_WIDTH, DOS_SCREEN_HEIGHT, 0, 0);
+	set_gfx_mode(GFX_SAFE, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0);
 	BITMAP* buffer = create_bitmap(SCREEN_W, 640);
 #else
 	set_gfx_mode(GFX_AUTODETECT, DOS_SCREEN_WIDTH, DOS_SCREEN_HEIGHT, 0, 0);
@@ -189,6 +189,8 @@ int main(int argc, char* argv[])
 	delete terrainTop;
 	delete terrainBottom;
 	delete objects;
+
+	exit(0);
 
 	return 0;
 	//Allegro will automatically deinitalize itself on exit

@@ -11,17 +11,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\4_tetris\gra.cpp" />
-    <ClCompile Include="..\..\..\sample\4_tetris\main.cpp" />
-    <ClCompile Include="..\..\..\sample\4_tetris\rozgrywka.cpp" />
-    <ClCompile Include="..\..\..\sample\4_tetris\silnik.cpp" />
-    <ClCompile Include="..\..\..\sample\4_tetris\start.cpp" />
+    <ClCompile Include="..\..\..\sample\4_tetris\src\gra.cpp" />
+    <ClCompile Include="..\..\..\sample\4_tetris\src\main.cpp" />
+    <ClCompile Include="..\..\..\sample\4_tetris\src\rozgrywka.cpp" />
+    <ClCompile Include="..\..\..\sample\4_tetris\src\silnik.cpp" />
+    <ClCompile Include="..\..\..\sample\4_tetris\src\start.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\sample\4_tetris\gra.h" />
-    <ClInclude Include="..\..\..\sample\4_tetris\rozgrywka.h" />
-    <ClInclude Include="..\..\..\sample\4_tetris\silnik.h" />
-    <ClInclude Include="..\..\..\sample\4_tetris\start.h" />
+    <ClInclude Include="..\..\..\sample\4_tetris\src\gra.h" />
+    <ClInclude Include="..\..\..\sample\4_tetris\src\rozgrywka.h" />
+    <ClInclude Include="..\..\..\sample\4_tetris\src\silnik.h" />
+    <ClInclude Include="..\..\..\sample\4_tetris\src\start.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{41689C9C-BB22-4576-92C3-1648CC8C3EA8}</ProjectGuid>

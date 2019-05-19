@@ -9,69 +9,69 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\8_shooter\animsel.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\animsel.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\aster.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\aster.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\bullet.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\bullet.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\demo.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\demo.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\dirty.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\dirty.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\display.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\display.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\expl.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\expl.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\game.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\game.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\star.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\star.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\8_shooter\title.c">
+    <ClCompile Include="..\..\..\sample\8_shooter\src\title.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\sample\8_shooter\animsel.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\animsel.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\aster.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\aster.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\bullet.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\bullet.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\data.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\data.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\demo.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\demo.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\dirty.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\dirty.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\display.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\display.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\expl.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\expl.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\game.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\game.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\star.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\star.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\8_shooter\title.h">
+    <ClInclude Include="..\..\..\sample\8_shooter\src\title.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

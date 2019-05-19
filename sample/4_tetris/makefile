@@ -19,6 +19,6 @@ main.exe : $(objs)
 	strip main.exe
 
 clean:
-	rm -f *.o 	
+	rm -f src/*.o 	
 	rm -f compile.log
 	rm -f main.exe

@@ -11,8 +11,8 @@ CPP = gpp.exe
 
 all: main.exe
 
-objs = animsel.o aster.o bullet.o demo.o dirty.o display.o \
-	   	expl.o game.o star.o title.o
+objs = src/animsel.o src/aster.o src/bullet.o src/demo.o src/dirty.o src/display.o \
+	   	src/expl.o src/game.o src/star.o src/title.o
 
 main.exe : $(objs)
 	gcc -o main.exe $(objs) \
@@ -20,6 +20,6 @@ main.exe : $(objs)
 	strip main.exe
 
 clean:
-	rm -f *.o 	
+	rm -f src/*.o 	
 	rm -f compile.log
 	rm -f main.exe

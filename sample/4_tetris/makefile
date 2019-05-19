@@ -11,7 +11,7 @@ CPP = gpp.exe
 
 all: main.exe
 
-objs = gra.o main.o rozgrywka.o silnik.o start.o	   	
+objs = src/gra.o src/main.o src/rozgrywka.o src/silnik.o src/start.o	   	
 
 main.exe : $(objs)
 	gcc -o main.exe $(objs) \

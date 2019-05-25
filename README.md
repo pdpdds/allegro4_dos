@@ -1,7 +1,7 @@
 # allegro4_dos
 dos / win32 cross platform development environment
 
-1. 목적
+1. 목적  
   이 시스템을 구축한 취지는 쉽고 편하게 도스 실기에서 동작하는 앱을 제작하자 입니다.
   MSX나 기타 플랫폼의 경우 아직까지 그 명맥을 잘 유지하고 있으며 특히 MSX의 경우
   현대 운영체제에서도 쉽게 MSX용 소프트웨어를 개발할 수 있는 환경이 조성되어 있습니다.
@@ -42,7 +42,7 @@ dos / win32 cross platform development environment
 
 - WIN32에서 최대한 버그 수정 및 디버깅
 
- <img src="./img/3.jpg">
+<img src="./img/3.jpg">
 
 이렇게 테스트를 완료뒤 이제 도스용 바이너리를 생성합니다.
 
@@ -50,8 +50,7 @@ dos / win32 cross platform development environment
 <img src="./img/4.jpg">
 
 - 도스박스로 최종 동작 확인
-- <img src="./img/5.jpg">
-- 
+<img src="./img/5.jpg">
 
 여기까지 보셨으면 이 시스템의 컨셉을 이해하셨으리라 생각합니다.
 도스 프로그램 제작에 관심이 있다면 이 시스템의 가능성을 믿고 도전해 보십시오.

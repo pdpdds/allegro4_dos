@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{61e0a1f9-1352-456a-ad84-16b5e979a02c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{4420960d-82cc-4abe-bc1e-a85d22bce16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\coll-c">
+      <UniqueIdentifier>{05916ba5-c1f7-4068-a964-89feff6dd32b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\sxmlc">
+      <UniqueIdentifier>{1b3ce1c0-e7cd-412e-9521-b2ded8689706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\coll-c\include">
+      <UniqueIdentifier>{a2fa8ceb-605f-4f1d-a765-fcf315a6366c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\fastsqrt">
+      <UniqueIdentifier>{d3f65e26-6bb0-414f-b34e-cba7e9277dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\win32">
+      <UniqueIdentifier>{abe3f61f-3c75-4eee-b199-f16770c0ae2c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\sample\16_fox\src\effect.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\fox.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\game.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\getopt.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\globals.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\gradient.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\hanconv.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\hanout.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\intro.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\menu.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\move.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\opening.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\sintbl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\stage.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\tool.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\win32\util.c">
+      <Filter>lib\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.c">
+      <Filter>lib\sxmlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.c">
+      <Filter>lib\fastsqrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\array.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\common.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\deque.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\hashset.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\hashtable.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\list.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\pqueue.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\queue.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\slist.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\stack.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treeset.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treetbl.c">
+      <Filter>lib\coll-c</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sample\16_fox\src\dat.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\effect.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\fox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\gradient.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\hanconv.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\hanout.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\intro.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\menu.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\move.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\opening.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\option.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\sintbl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\stage.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\tool.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\win32\util.h">
+      <Filter>lib\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.h">
+      <Filter>lib\sxmlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastflot.h">
+      <Filter>lib\fastsqrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.h">
+      <Filter>lib\fastsqrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\array.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\common.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\deque.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\hashset.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\hashtable.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\list.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\pqueue.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\queue.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\slist.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\stack.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\treeset.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\treetbl.h">
+      <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

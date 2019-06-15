@@ -1,0 +1,29 @@
+Umm.... just a few things I use in my game.
+
+fastflot.h: contains an inline fast float to int rounder. Do not pass in
+            anything greater or equal to 2^23.
+fastsqrt.c
+and
+fastsqrt.h: put them together, you get a roughly 3x faster than fsqrt sqrt()
+            In general, you'll want to call fast_fsqrt_asm(), but the
+            original Graphics Gems fast_fsqrt() is still in there in C
+            for reference.
+            Call build_sqrt_table() first!
+            The drawback to this routine is that you can be up to, I think 6%
+            off in your answer. But in a supa-fast 3d engine where no one
+            would notice the diff anyway, there you go.
+
+If you're not getting this directly from my site, they originally came
+from
+http://brennan.home.ml.org/djgpp/
+or
+http://brennan.home.ml.org/programming/
+
+My main page is
+http://brennan.home.ml.org/
+quite a feast for the senses, I hope.
+
+
+Brennan Underwood
+(currently brennan@rt66.com, but the above URL should always work)
+June 21, 1997

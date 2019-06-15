@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\sample\16_fox\src\effect.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\fox.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\game.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\getopt.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\globals.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\gradient.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\hanconv.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\hanout.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\intro.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\array.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\common.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\deque.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\hashset.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\hashtable.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\list.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\pqueue.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\queue.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\slist.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\stack.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treeset.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treetbl.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\win32\util.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\menu.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\move.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\opening.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\sintbl.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\stage.c" />
+    <ClCompile Include="..\..\..\sample\16_fox\src\tool.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sample\16_fox\src\dat.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\effect.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\fox.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\game.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\gradient.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\hanconv.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\hanout.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\intro.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\array.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\common.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\deque.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\hashset.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\hashtable.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\list.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\pqueue.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\queue.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\slist.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\stack.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\treeset.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\treetbl.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastflot.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\win32\util.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\menu.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\move.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\opening.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\option.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\sintbl.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\stage.h" />
+    <ClInclude Include="..\..\..\sample\16_fox\src\tool.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D64EEC38-463D-4B9D-9EE1-016EE37BA598}</ProjectGuid>
+    <RootNamespace>ex12bit</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>16_fox</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27625.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\examples\</OutDir>
+    <IntDir>..\..\..\obj\msvc\alleg\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./lib/win32;./lib/fastsqrt;./lib/sxmlc;./lib/coll-c/include;.;..\..\..\;..\..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_X86_;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\lib\msvc\alleg.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../sample/16_fox/src/lib/win32;../../../sample/16_fox/src/lib/fastsqrt;../../../sample/16_fox/src/lib/sxmlc;../../../sample/16_fox/src/lib/coll-c/include;../../../sample/16_fox/src;..\..\;..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_X86_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SDLCheck>true</SDLCheck>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DisableSpecificWarnings>4700;4113;4473;4716;4244;4100;4459;4101;4456;4706;4189</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>allegro.lib;kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;ole32.lib;dinput8.lib;ddraw.lib;dxguid.lib;winmm.lib;dsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)/$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SetChecksum>true</SetChecksum>
+      <SubSystem>Windows</SubSystem>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>false</MapExports>
+      <AdditionalLibraryDirectories>..\debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

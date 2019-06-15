@@ -62,7 +62,7 @@ After completing this test, we will now create the DOS binary.
 
 - Source code build with DJGPP
 -  you must download djgpp build system. you can find it in github release tab.
--  
+  
 <img src="./img/4.jpg">
 
 - Final check through DOSBox

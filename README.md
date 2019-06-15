@@ -1,31 +1,30 @@
 # allegro4_dos
 dos / win32 cross platform development environment
 
-1. 목적  
-  이 시스템을 구축한 취지는 쉽고 편하게 도스 실기에서 동작하는 앱을 제작하자 입니다.
-  MSX나 기타 플랫폼의 경우 아직까지 그 명맥을 잘 유지하고 있으며 특히 MSX의 경우
-  현대 운영체제에서도 쉽게 MSX용 소프트웨어를 개발할 수 있는 환경이 조성되어 있습니다.
-  물론 도스도 도스 프로그램을 제작가능하게 해주는 Watcom C/C++이나 Trubo C++ 등이
-  있지만 도스 시절의 코딩 스타일로 프로그램을 짜는 것은 아무래도 시대를 역행하는 면이 
-  있다고 판단합니다.
- WIN32/도스 프로그래밍 컴플리트 시스템을 이용하면 윈도우즈 운영체제에서 최강의 IDE인
- 비쥬얼 스튜디오로 개발을 함과 동시에 C/C++ 언어를 사용할 수 있습니다.
- 물론 약간의 제약이 있긴 하지만 나름 최신의 방법으로 도스 프로그램을 제작할 수 있게 되고
-  도스용 프로그램이 하나둘씩 나오게 된다면 도스는 그 명맥이 끊기지 않고 생명력을
-  계속 유지해 나갈 것이라 생각합니다.
+1. Purpose  
+  The purpose of this system is to make an app that works easily and conveniently in DOS. 
+  There are Watcom C / C ++ and Trubo C ++ that allow DOS programs to be created. 
+  However, I think that creating programs with DOS-style coding style is going to reverse the times. 
+  WIN32 / DOS Programming complete system allows you to use the C/C++ language 
+  while developing with Visual Studio, the most powerful IDE on the Windows operating system. 
+  Of course, there are some limitations, but if you are able to create DOS programs with the latest methods 
+  and if DOS programs come out one by one, I think DOS will continue to maintain its vitality.
 
-2. WIN32/도스 프로그래밍 컴플리트 시스템 특징
- - 하나의 소스로 WIN32와 도스에서 동작하는 프로그램 제작
- - Visual Studio 2017로 프로그램 개발
- - Visual Studio 2017를 통해 선행적 디버깅 가능 및 앱 튜닝 가능
- - DJGPP를 통한 도스용 바이너리 생성 및 도스박스를 통한 앱 테스트
+2. WIN32 / DOS Programming Complete System Features
+ - Create programs that run on WIN32 and DOS as one source
+ - Program development with Visual Studio 2017
+ - Visual Studio 2017 enables proactive debugging and app tuning
+ - Create DOS binaries via DJGPP and test your app with DOSBox
 
- 이런 특징을 통해 프로그래밍을 어느정도 아신다면 도스 플랫폼에 대해 특별히 고민할 필요없이
- 쉽게 도스용 프로그램을 제작할 수 있습니다.
+  If you are familiar with programming, 
+you do not have to worry about the DOS platform.
+ and You can easily create a DOS program.
 
-3. 샘플 소스
- - 해당 시스템에는 세가지 샘플 소스가 있으며 향후 계속해서 샘플을 추가해 나갈 예정입니다.
-   |     PROJECT  |  	WIN32      | DOS   |
+3. Sample Source
+ - There are a few sample sources in the system, and we will continue to add samples in the future.
+ 
+ 
+  |     PROJECT  |  	WIN32      | DOS   |
 |:-:|:-:|:-:|
 |  HELLO WORLD | 100%  | 100%  |
 |  PONG |  100% | 100%  |
@@ -44,28 +43,30 @@ dos / win32 cross platform development environment
 | WINADV  | 100%  |   |
 | FOX RANGER  | 100%  | 100%  |
 
-대략적으로 WIN32/도스 프로그래밍 컴플리트 시스템을 설명했기에 이 시스템에 대해 
-아직 감이 잘 오지 않을 수 있기에 사용법을 구체적으로 설명하기에 앞서 사례를 들어보도록 하겠습니다.
+We have outlined the WIN32 / DOS programming complete system. 
+So this system may not be feeling well yet. 
+Let's take a look at some examples before we explain how to use them.
 
-4. 개발 절차
- - 비쥬얼 스튜디오로 프로그램 개발
+4. Development Procedure
+ - Program development with visual studio
 <img src="./img/1.jpg">
 
-- 빌드 및 실행
+- Build and Run
 <img src="./img/2.jpg">
 
-- WIN32에서 최대한 버그 수정 및 디버깅
+- Bug fixes and debugging as much as possible in WIN32
 
 <img src="./img/3.jpg">
 
-이렇게 테스트를 완료뒤 이제 도스용 바이너리를 생성합니다.
+After completing this test, we will now create the DOS binary.
 
-- DJGPP로 소스코드 빌드
+- Source code build with DJGPP
 <img src="./img/4.jpg">
 
-- 도스박스로 최종 동작 확인
+- Final check through DOSBox
 <img src="./img/5.jpg">
 
-여기까지 보셨으면 이 시스템의 컨셉을 이해하셨으리라 생각합니다.
-도스 프로그램 제작에 관심이 있다면 이 시스템의 가능성을 믿고 도전해 보십시오.
-난관에 부딪힌다면 언제든지 도와드릴 수 있으니 걱정하지 마시기 바랍니다.
+If you've been to this point, 
+I think you understand the concept of this system.
+If you are interested in creating a DOS program, believe it and try it out.
+Please do not worry if you are in trouble, we can help you anytime.

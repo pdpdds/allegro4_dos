@@ -25,10 +25,24 @@ dos / win32 cross platform development environment
 
 3. 샘플 소스
  - 해당 시스템에는 세가지 샘플 소스가 있으며 향후 계속해서 샘플을 추가해 나갈 예정입니다.
-   1) Hello World (C)
-   2) Pong (C)
-   3) RA2 (C++)
- 
+   |     PROJECT  |  	WIN32      | DOS   |
+|:-:|:-:|:-:|
+|  HELLO WORLD | 100%  | 100%  |
+|  PONG |  100% | 100%  |
+|   RA2|  100% | 100%  |
+|  TETRIS | 100%  | Resolution problem  |
+| EAGLE GUI  | 100%  | Resolution problem  |
+| BOAT RAGE  | Executable  | problem |
+| STRIKER  | Logic Bug  | Resolution problem  |
+| SHOOTER  | 100%  | 100%  |
+| SKATER   | 100%  | 100%  |
+| TBENGINE  | 100%  | Resolution problem  |
+| DONKEY  | 100%  | Resolution problem  |
+| CHESS   | BUG  | problem  |
+| TANK  | 100%  |   |
+| HORACIO  | 100%  |   |
+| WINADV  | 100%  |   |
+| FOX RANGER  | 100%  | 100%  |
 
 대략적으로 WIN32/도스 프로그래밍 컴플리트 시스템을 설명했기에 이 시스템에 대해 
 아직 감이 잘 오지 않을 수 있기에 사용법을 구체적으로 설명하기에 앞서 사례를 들어보도록 하겠습니다.

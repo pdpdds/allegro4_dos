@@ -49,6 +49,8 @@ Let's take a look at some examples before we explain how to use them.
 
 4. Development Procedure
  - Program development with visual studio
+ - You can find dos_dev solution file in msvc15/build folder
+  
 <img src="./img/1.jpg">
 
 - Build and Run

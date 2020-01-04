@@ -20,7 +20,7 @@
       <UniqueIdentifier>{d3f65e26-6bb0-414f-b34e-cba7e9277dff}</UniqueIdentifier>
     </Filter>
     <Filter Include="lib\win32">
-      <UniqueIdentifier>{abe3f61f-3c75-4eee-b199-f16770c0ae2c}</UniqueIdentifier>
+      <UniqueIdentifier>{c27e1cb0-ea41-471c-a335-731895a10ffa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -66,12 +66,6 @@
     <ClCompile Include="..\..\..\sample\16_fox\src\stage.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\sample\16_fox\src\tool.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\sample\16_fox\src\lib\win32\util.c">
-      <Filter>lib\win32</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.c">
       <Filter>lib\sxmlc</Filter>
     </ClCompile>
@@ -113,6 +107,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treetbl.c">
       <Filter>lib\coll-c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\tool.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\sample\16_fox\src\lib\win32\util.c">
+      <Filter>lib\win32</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,12 +158,6 @@
     <ClInclude Include="..\..\..\sample\16_fox\src\stage.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\sample\16_fox\src\tool.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\sample\16_fox\src\lib\win32\util.h">
-      <Filter>lib\win32</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.h">
       <Filter>lib\sxmlc</Filter>
     </ClInclude>
@@ -208,6 +202,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\sample\16_fox\src\lib\coll-c\include\treetbl.h">
       <Filter>lib\coll-c\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\tool.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\16_fox\src\lib\win32\util.h">
+      <Filter>lib\win32</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

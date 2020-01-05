@@ -12,8 +12,8 @@ dos / win32 cross platform development environment
 
 2. WIN32 / DOS Programming Complete System Features
  - Create programs that run on WIN32 and DOS as one source
- - Program development with Visual Studio 2017
- - Visual Studio 2017 enables proactive debugging and app tuning
+ - Program development with Visual Studio 2019
+ - Visual Studio 2019 enables proactive debugging and app tuning
  - Create DOS binaries via DJGPP and test your app with DOSBox
 
   If you are familiar with programming, 

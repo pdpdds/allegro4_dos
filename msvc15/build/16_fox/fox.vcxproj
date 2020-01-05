@@ -34,7 +34,6 @@
     <ClCompile Include="..\..\..\sample\16_fox\src\lib\coll-c\treetbl.c" />
     <ClCompile Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.c" />
     <ClCompile Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.c" />
-    <ClCompile Include="..\..\..\sample\16_fox\src\lib\win32\util.c" />
     <ClCompile Include="..\..\..\sample\16_fox\src\menu.c" />
     <ClCompile Include="..\..\..\sample\16_fox\src\move.c" />
     <ClCompile Include="..\..\..\sample\16_fox\src\opening.c" />
@@ -66,7 +65,6 @@
     <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastflot.h" />
     <ClInclude Include="..\..\..\sample\16_fox\src\lib\fastsqrt\fastsqrt.h" />
     <ClInclude Include="..\..\..\sample\16_fox\src\lib\sxmlc\sxmlc.h" />
-    <ClInclude Include="..\..\..\sample\16_fox\src\lib\win32\util.h" />
     <ClInclude Include="..\..\..\sample\16_fox\src\menu.h" />
     <ClInclude Include="..\..\..\sample\16_fox\src\move.h" />
     <ClInclude Include="..\..\..\sample\16_fox\src\opening.h" />
@@ -79,19 +77,19 @@
     <ProjectGuid>{D64EEC38-463D-4B9D-9EE1-016EE37BA598}</ProjectGuid>
     <RootNamespace>ex12bit</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>16_fox</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>

@@ -40,9 +40,6 @@ public:
 	void waitForTicks();
 
 	inline AllegroScreen *screen() const { return mScreen; }
-
-	static void IncrementSpeedCounter();
-	static void TimeTicker();
 };
 
 #endif

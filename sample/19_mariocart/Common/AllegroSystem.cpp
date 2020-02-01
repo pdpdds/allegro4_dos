@@ -6,6 +6,25 @@
 #include <string>
 #include <allegro.h>
 
+void IncrementSpeedCounter()
+{
+	AllegroSystem::SpeedCounter++;
+	//	LastFps = Fps;
+	//	Fps = 0;
+	//	AvgFps = (AvgFps * LastFps) / 2;
+}
+
+END_OF_FUNCTION(IncrementSpeedCounter);
+
+
+void TimeTicker()
+{
+	AllegroSystem::TimeTicks++;
+}
+
+END_OF_FUNCTION(TimeTicker);
+
+
 AllegroSystem *AllegroSystem::mInstance = 0;
 volatile long AllegroSystem::SpeedCounter = 0;
 volatile long AllegroSystem::TimeTicks = 0;
@@ -37,7 +56,7 @@ bool AllegroSystem::setupScreen(const ObjectSize &size,
 	try {
 		mScreen = new AllegroScreen(size, fullScreen, colorDepth);
 	} catch (std::string e) {
-		std::cout << "Ocorreu uma exceção: " << e << std::endl;
+		std::cout << "exception occured : " << e << std::endl;
 		return false;
 	}
 
@@ -54,12 +73,12 @@ void AllegroSystem::initializeTimers()
 	install_timer();
 
 	LOCK_VARIABLE(AllegroSystem::SpeedCounter);
-	LOCK_FUNCTION(AllegroSystem::IncrementSpeedCounter);
-	install_int_ex(AllegroSystem::IncrementSpeedCounter, BPS_TO_TIMER(30));
+	LOCK_FUNCTION(IncrementSpeedCounter);
+	install_int_ex(IncrementSpeedCounter, BPS_TO_TIMER(30));
 
-	LOCK_VARIABLE(AllegroSystem::TimeTicks);
-	LOCK_FUNCTION(AllegroSystem::TimeTicker);
-	install_int_ex(AllegroSystem::TimeTicker, BPS_TO_TIMER(30));
+	LOCK_VARIABLE(TimeTicks);
+	LOCK_FUNCTION(TimeTicker);
+	install_int_ex(TimeTicker, BPS_TO_TIMER(30));
 }
 
 void AllegroSystem::pollEvents()
@@ -72,17 +91,4 @@ void AllegroSystem::waitForTicks()
 {
 }
 
-void AllegroSystem::IncrementSpeedCounter()
-{
-	AllegroSystem::SpeedCounter++;
-//	LastFps = Fps;
-//	Fps = 0;
-//	AvgFps = (AvgFps * LastFps) / 2;
-}
-END_OF_FUNCTION(AllegroSystem::IncrementSpeedCounter);
 
-void AllegroSystem::TimeTicker()
-{
-	AllegroSystem::TimeTicks++;
-}
-END_OF_FUNCTION(AllegroSystem::TimeTicker);

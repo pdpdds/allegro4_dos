@@ -10,6 +10,6 @@ class player {
   int rudder; //och roder?
 //  int armor;
   int money; //hur mycket pengar spelaren har
-  int lastposition; //vilken plats spelaren kom p† f”rra g†ngen
+  int lastposition; //vilken plats spelaren kom p?f”rra g†ngen
   char name[16]; //spelarens namn (funkar inte „n)
 };

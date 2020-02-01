@@ -12,10 +12,12 @@ AllegroScreen::AllegroScreen(const ObjectSize &size, bool fullScreen, ColorDepth
 			bpp = 16;
 
 	set_color_depth(bpp);
-
-	if (set_gfx_mode((fullScreen ? GFX_AUTODETECT_FULLSCREEN : GFX_AUTODETECT_WINDOWED),
-		size.width(), size.height(), 0, 0))
-		throw std::string("Não foi possível definir a profundidade de cor");
+#ifdef _WIN32
+	if (set_gfx_mode((fullScreen ? GFX_AUTODETECT_FULLSCREEN : GFX_AUTODETECT_WINDOWED), size.width(), size.height(), 0, 0))
+#else
+	if(set_gfx_mode(GFX_AUTODETECT, size.width(), size.height(), 0, 0))
+#endif
+		throw std::string("Could not set color depth");
 
 	mBitmap = create_bitmap(SCREEN_W, SCREEN_H);
 }

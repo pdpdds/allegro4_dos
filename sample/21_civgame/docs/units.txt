@@ -1,0 +1,35 @@
+Units
+-----
+
+ Default Scenario
+ ----------------
+
+  Standard Units (good)
+
+  Standard Units (neutral)
+
+    o Shieldmen
+    o Spearmen
+    o Infantry
+    o Knight
+    o Cavalry
+    o Spy (male)
+    o Spy (female)
+    o Archer
+    o Catapult
+
+  Standard Units (evil)
+
+    o Orc Infantry
+    o Wolf Riders
+    o Barbarian
+
+  Special Units
+
+    o Dragon Hunter
+    o Witch
+    o Wizard
+    o Dragon (different types)
+    o Griffon
+    o Manticore (lion with wings)
+

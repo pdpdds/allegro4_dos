@@ -1,0 +1,39 @@
+Map
+---
+
+Tiles are 24x24.
+
+The standard tile set has these definitions:
+
+o Grass (Buffer)
+o Water
+o Forest
+o Hills
+o Mountains
+o Desert
+o Swamp
+o Road
+
+Custom map styles may define any number of tiles.
+
+The buffer tile acts as a border around all other tiles. All other tiles must
+have a set of transitions to this buffer.
+
+
+GGGG
+FFGGGG
+FFHHHH
+FGGGHHHH
+GGGGGGHHH
+
+
+ DD     DG
+  FG    WG
+  GG    MG
+        HG
+  WW
+ WGGW
+WGGGGW
+ WGGW
+  WW
+

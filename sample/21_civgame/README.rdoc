@@ -1,0 +1,23 @@
+= civgame
+
+This was some hacking I did with Lucy in 1999. I updated the code a little to
+avoid deprecated Allegro function calls, use PCX files instead of LBM (nothing
+supports LBM format anymore), use boost:shared\_ptr to wrap Allegro BITMAP
+pointers for memory management convenience, and put some FPS limiting code in.
+I feel like this was the bare minimum to get it tided up, compiling and running
+on a modern computer.
+
+Still, it is ancient C++ code that I am uploading for safe keeping, for my own
+nostalgia, so please read it with a forgiving attitude.
+
+It must be run from the directory containing its data directories. It supports
+two modes of operation:
+
+  ./civgame
+
+This randomly generates a map and lets you scroll around it with a minimap.
+
+  ./civgame gui
+
+This runs the GUI demo.
+

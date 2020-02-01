@@ -1,0 +1,41 @@
+Ideas
+-----
+
+Greg
+
+  o More standard unit options - barter, equip, use (items).
+
+  o Allow units to barter in cities.
+
+  o More productive alliances (?).
+
+  o Espionage.
+
+  o Alignment (good, evil) for units.
+
+  o Mini-game when units fight.
+
+
+Lucy
+
+  o Require a quest to be completed before capital can be taken.
+
+  o Ways to get heroes other than by random chance (good units surviving
+    battle, for example).
+
+  o Wild monsters (a bit like barbarians).
+    - Evil monsters     } will attack, barter, give quests, or join you
+    - Neutral monsters  } depending on your alignment vs. theirs
+    - Good monsters     }
+
+  o Tournament of champions (mini-games for heroes).
+    - Jousting
+    - Archery
+    - Moonstone-esque fighting
+    - Beauty contest
+
+
+Tristan
+
+  o Cities can be jointly owned and run (relations become hostile leads to
+    civil war).

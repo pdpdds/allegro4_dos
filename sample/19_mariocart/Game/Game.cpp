@@ -21,8 +21,9 @@ Game::Game():
 {
 	mCurrentTrack = new Track(1);
 	mCamera = new Camera();
+	
 	mPlayer = new Player();
-
+	
 	TrackInfo info = mCurrentTrack->info();
 
 	mOpponents[0] = new Opponent(Opponent::Luigi);

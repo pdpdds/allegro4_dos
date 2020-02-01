@@ -9,10 +9,10 @@ Player::Player()
 {
 	mBitmap = create_bitmap(32, 32);
 	mSprite = load_bitmap("Data/Mario.bmp", NULL);
-
+	
 	floodfill(mBitmap, 0, 0, makecol(0, 0, 0));
 	blit(mSprite, mBitmap, 0, 0, 0, 0, 32, 32);
-
+	
 	// Ajustar isso
 	mPositionX = 913;
 	mPositionY = 652;

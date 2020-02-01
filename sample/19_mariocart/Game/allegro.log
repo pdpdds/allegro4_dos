@@ -1,0 +1,6 @@
+al-main INFO: Allegro initialised (instance 1)
+al-gfx INFO: Called set_gfx_mode(2, 640, 480, 0, 0).
+al-gfx INFO: First call, remembering console state.
+al-gfx INFO: Autodetecting graphic driver.
+al-gfx INFO: The driver will wait for vsync.
+al-gfx INFO: set_gfx_card success for 640x480x32.

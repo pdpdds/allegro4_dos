@@ -1,22 +1,27 @@
 OPTIMIZED_CFLAGS = -O3 -ffast-math
-CFLAGS = $(OPTIMIZED_CFLAGS) -Wdeprecated-declarations  \
-	-I. -I..\..\allegro\include
-CPPFLAGS = $(OPTIMIZED_CFLAGS) -fpermissive -Wdeprecated-declarations  \
--I. -I..\..\allegro\include
+CFLAGS = $(OPTIMIZED_CFLAGS) -Wall  \
+	-I. -I..\..\allegro\include -I.\include	
+CFLAGS += -DUSE_DATAFILE
+CPPFLAGS = $(OPTIMIZED_CFLAGS) -Wall  \
+	-I. -I..\..\allegro\include -I.\include
 CC = gcc.exe
 CPP = gpp.exe
 
 .c.o: 
-	$(CPP) $(CPPFLAGS) -c $< 2>&1 | tee -a compile.log
+	$(CC) $(CFLAGS) -c $< 2>&1 | tee -a compile.log
+
+src/%.o: src/%.c
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 all: main.exe
 
-main.exe : $(patsubst %.c,%.o,$(wildcard src/*.c)) \
-	gcc -o main.exe \
+main.exe : $(patsubst %.c,%.o,$(wildcard src/*.c))
+	gcc -o main.exe ./src/*.o\
 		-L../../allegro/lib -lalleg -lstdc++
 	strip main.exe
 
 clean:
-	rm -f src/*.o 	
+	rm -f *.o
+	rm -f src/*.o	
 	rm -f compile.log
 	rm -f main.exe

@@ -1,0 +1,20 @@
+= isorpg
+
+I hacked this together in 1999, learning C++ and Allegro, to explore how to
+have an isometric tile based map in a game that did not rely on transparent
+sprite drawing for each tile on the map.
+
+The strategy used pre-renders every combination of "edges" between isometric
+tiles that are actually used in a particular map. These edges (called OTILES or
+orthogonal tiles in the code) are rectangles and can be drawn to the screen
+with fast blits with no transparency checking.
+
+It must be run from the directory containing its data directories.
+
+  ./isorpg
+
+== Changes from the 1999 original
+
+I have done the minimum I feel is necessary to get it running on a modern
+computer. I have updated the memory management to use boost::shared\_ptr,
+reformatted the code and bumped up the resolution. 

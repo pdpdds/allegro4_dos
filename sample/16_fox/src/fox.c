@@ -211,7 +211,7 @@ int setup(void)
 #ifdef _WIN32
 	if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 320, 200, 0, 0) != 0) {
 #else
-    if (set_gfx_mode(GFX_VGA, 320, 200, 0, 0) != 0) {
+    //if (set_gfx_mode(GFX_VGA, 320, 200, 0, 0) != 0) {
 #endif
 		printf("\tCould not set video mode to 320x200.\n");
 		printf("\tAllegro error: %s\n", allegro_error);

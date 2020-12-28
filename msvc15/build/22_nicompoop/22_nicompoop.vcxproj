@@ -23,7 +23,7 @@
     <ProjectGuid>{66A2419A-610C-4C23-9053-39C93F570982}</ProjectGuid>
     <RootNamespace>ex12bit</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>22_nincompoop</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

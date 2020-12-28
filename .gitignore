@@ -18,3 +18,9 @@ msvc15/build/.vs/dos_dev/v16/.suo
 *.exp
 *.ilk
 *.lib
+allegro/
+djgpp/
+djgpp.bat
+dosbox.bat
+dosbox/
+tools/

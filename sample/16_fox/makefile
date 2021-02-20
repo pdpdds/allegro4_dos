@@ -32,7 +32,7 @@ main.exe : $(patsubst %.c,%.o,$(wildcard src/lib/fastsqrt/*.c)) \
 	$(patsubst %.c,%.o,$(wildcard src/lib/sxmlc/*.c)) $(objs)
 	gcc -o main.exe $(objs2) \
 		./src/lib/coll-c/*.o ./src/lib/fastsqrt/*.o ./src/lib/sxmlc/*.o \
-		./src/lib/ppcol/lib/LIBPPCOL.A -L./src/lib/allegro/lib -lalleg
+		-L./src/lib/allegro/lib -lalleg
 	strip main.exe
 
 clean:

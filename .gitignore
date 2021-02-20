@@ -24,3 +24,6 @@ djgpp.bat
 dosbox.bat
 dosbox/
 tools/
+*.SWP
+*.o
+*.ipch

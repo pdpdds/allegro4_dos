@@ -106,7 +106,7 @@ int opening(void)
 	float title_accel3 = 0.0;
 	int title_loop3 = FALSE;
 	
-	install_int_ex(timer_proc, BPS_TO_TIMER(option.fps));
+	install_int_ex(timer_proc, BPS_TO_TIMER(20));
 	update_count = 0;
 
 	do {

@@ -39,10 +39,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_striker", "7_striker\str
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_shooter", "8_shooter\shooter.vcxproj", "{69FE54A3-1ED9-45F1-A23C-7D4669EA2E9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "allegro", "allegro_win32\allegro\allegro.vcxproj", "{0889308C-5366-4685-B527-B983DB3E1930}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_skater", "9_skater\skater.vcxproj", "{07FAC67D-5D09-4EAF-8445-C1DFAB7DCCAE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_tbengine", "10_tbengine\tbengine.vcxproj", "{E57DB9EA-7371-40A5-BF35-5CBA48C9EC14}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -50,30 +56,69 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_tbengine", "10_tbengine\
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_donkey", "11_donkey\donkey.vcxproj", "{85C837F8-88F6-4CE8-9C40-80D1C5FF4EA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_xdgp", "12_xdgp\xdgp.vcxproj", "{91AE5477-E639-40B2-B803-CC2CD1B4CBBA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_tank", "13_tank\tank.vcxproj", "{E4838C38-3532-40A4-9407-2F30A53F65CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_horacio", "14_horacio\horacio.vcxproj", "{7BE45A45-A39E-4BE9-864B-BCBB23D41F16}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_winadv", "15_winadv\winadv.vcxproj", "{E78612BD-5412-4135-B999-37A142361F15}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "16_fox", "16_fox\fox.vcxproj", "{D64EEC38-463D-4B9D-9EE1-016EE37BA598}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_alice", "17_alice\alice.vcxproj", "{4B4F7481-0935-4046-9D65-A725432DE848}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_breakout", "18_breakout\18_breakout.vcxproj", "{EC950082-A5EB-4107-8D2B-A1425B38A27C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19_mariocart", "19_mariocart\19_mariocart.vcxproj", "{8B7138FC-9B61-4B89-BD30-1CD512B0F0CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_tetris", "20_tetirs\20_tetris.vcxproj", "{C6EEBD51-AC71-48B8-A069-6F06464DCB47}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_civgame", "21_civgame\21_civgame.vcxproj", "{38E9355B-5ABA-4BFE-8273-217C3AEC64C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22_nincompoop", "22_nicompoop\22_nicompoop.vcxproj", "{66A2419A-610C-4C23-9053-39C93F570982}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23_isorpg", "23_isorpg\23_isorpg.vcxproj", "{DF13A948-0E36-495F-8310-24A44496C963}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0889308C-5366-4685-B527-B983DB3E1930} = {0889308C-5366-4685-B527-B983DB3E1930}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

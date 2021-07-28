@@ -4351,6 +4351,14 @@ int stage_start(int stage)
 				break;
 			}
 
+#ifdef _DEBUG
+			if (key[KEY_N]) 
+			{
+				stage_clear_flag = TRUE;
+				stage++;
+				break;
+			}
+#endif // DEBUG
 			if (game_end == TRUE) {
 				if (key[KEY_N]) break;
 

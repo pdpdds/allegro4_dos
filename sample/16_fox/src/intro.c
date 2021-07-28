@@ -587,7 +587,7 @@ int intro(void)
 #endif
 
 		float scale = 1.0;
-		BITMAP *fox_new_bitmaps[30];
+		BITMAP* fox_new_bitmaps[30] = { 0, };
 		int fox_count = 1;
 		while(1) {
 			if(scale<0.1) break;
@@ -673,8 +673,10 @@ int intro(void)
 
 		// ------------------	
 		int i;
-		for(i=0; i<fox_count; i++) {
-			destroy_bitmap(fox_new_bitmaps[i]);
+		for(i=0; i<fox_count; i++) 
+		{
+			if(fox_new_bitmaps[i])
+				destroy_bitmap(fox_new_bitmaps[i]);
 		}
 		for(i=0; i<MAX_SPRITE; i++) {
 			destroy_bitmap(launch_bitmaps[i]);

@@ -306,7 +306,7 @@ int main(int argc, char **argv)
 #ifdef _DEBUG
 #else
 	if(option.logo) {
-		//show_logo();
+		show_logo();
 	}
 #endif
 
@@ -314,7 +314,7 @@ int main(int argc, char **argv)
 
 #ifdef _DEBUG
 #else
-	//opening();
+	opening();
 #endif
 
 	while (1) 

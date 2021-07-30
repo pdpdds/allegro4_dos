@@ -3208,8 +3208,8 @@ void load_fox_weapon(int stage)
 	char *xml = stage_data[DAT_WEAPON_XML].dat;
 #else
 	sprintf(tmp, "RES/STAGE%d/WEAPON.XML", stage);
-	char *xml;
-	read_text_file(tmp, &xml);
+	//char *xml;
+	//read_text_file(tmp, &xml);
 #endif
 
 	if (!XMLDoc_parse_buffer_DOM(xml, NULL, &doc)) {
@@ -3335,7 +3335,8 @@ void load_orbit_xml(char *file_name)
 		list_new(&orbit_list);
 
 		char **items = NULL;
-		int c = split(node->text, '\n', &items);
+		int c = 0;
+		items = split(node->text, '\n', &c);
 		int i;
 		for (i = 0; i < c; i++) {
 			char *line = trim(*(items + i));
@@ -3966,7 +3967,8 @@ int load_stage_resource(int stage)
 
 								trimmed(node4->text, &text);
 
-								int c = split(text, '\n', &items);
+								int c = 0;
+								items = split(text, '\n', &c);
 								free(text);
 
 								// 비트맵 전체 width를 계산
@@ -4112,7 +4114,9 @@ int load_stage_resource(int stage)
 							list_new(&res->bitmaps);
 
 							char **items = NULL;
-							int c = split(node3->text, '\n', &items);
+							int c = 0;
+							items = split(node3->text, '\n', &c);
+
 							for (i = 0; i < c; i++) {
 								char *line = trim(*(items + i));
 								if (strlen(line) > 0) {
@@ -4351,14 +4355,14 @@ int stage_start(int stage)
 				break;
 			}
 
-#ifdef _DEBUG
+//#ifdef _DEBUG
 			if (key[KEY_N]) 
 			{
 				stage_clear_flag = TRUE;
 				stage++;
 				break;
 			}
-#endif // DEBUG
+//#endif // DEBUG
 			if (game_end == TRUE) {
 				if (key[KEY_N]) break;
 

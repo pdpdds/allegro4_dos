@@ -57,7 +57,7 @@ int trimmed(const char* src, char** dst) ;
 int string_to_list (const char *str, const char *tok, List *list);
 int string_to_int_list (const char *str, const char *tok, List *list);
 
-int split (const char *str, char c, char ***arr);
+char** split(char* sentence, char separator, int* num_tokens);
 
 char* concat(int count, ...);
 

@@ -411,66 +411,65 @@ int string_to_int_list (const char *str, const char *tok, List *list)
 	return list_size(list);
 }
 
-int split (const char *str, char c, char ***arr)
-{
-    int count = 1;
-    int token_len = 1;
-    int i = 0;
-    const char *p;
-    char *t;
+#define INIT_SIZE 8
 
-    p = str;
-    while (*p != '\0')
-    {
-        if (*p == c)
-            count++;
-        p++;
-    }
+char* str(int size) {
+	char* string = (char*)malloc(sizeof(char) * size);
 
-    *arr = (char**) malloc(sizeof(char*) * count);
-    if (*arr == NULL)
-        exit(1);
+	for (int i = 0; i < size; i++)
+		string[i] = '\0';
 
-    p = str;
-    while (*p != '\0')
-    {
-        if (*p == c)
-        {
-            (*arr)[i] = (char*) malloc( sizeof(char) * token_len );
-            if ((*arr)[i] == NULL)
-                exit(1);
-
-            token_len = 0;
-            i++;
-        }
-        p++;
-        token_len++;
-    }
-    (*arr)[i] = (char*) malloc( sizeof(char) * token_len );
-    if ((*arr)[i] == NULL)
-        exit(1);
-
-    i = 0;
-    p = str;
-    t = ((*arr)[i]);
-    while (*p != '\0')
-    {
-        if (*p != c && *p != '\0')
-        {
-            *t = *p;
-            t++;
-        }
-        else
-        {
-            *t = '\0';
-            i++;
-            t = ((*arr)[i]);
-        }
-        p++;
-    }
-
-    return count;
+	return string;
 }
+
+char** split(char* sentence, char separator, int* num_tokens) {
+	char** tokens;
+	int* lengths;
+	int tokens_idx = 0;
+	int token_idx = 0;
+	*num_tokens = 1;
+
+	for (int i = 0; i < strlen(sentence); i++) {
+		if (sentence[i] == separator)
+			(*num_tokens)++;
+	}
+
+	lengths = (int*)malloc(sizeof(int) * (*num_tokens));
+	tokens = (char**)malloc(sizeof(char*) * (*num_tokens));
+
+	for (int i = 0; i < *num_tokens; i++) {
+		tokens[i] = str(INIT_SIZE);
+		lengths[i] = INIT_SIZE;
+	}
+
+	for (int i = 0; i < strlen(sentence); i++) {
+		if (sentence[i] == separator && strlen(tokens[tokens_idx]) != 0) {
+			token_idx = 0;
+			tokens_idx++;
+		}
+		else if (sentence[i] == separator && strlen(tokens[tokens_idx]) == 0) {
+			continue;
+		}
+		else {
+			/* Memory reallocation, If  array is full. */
+
+			if (strlen(tokens[tokens_idx]) == lengths[tokens_idx] - 1) {
+				tokens[tokens_idx] = realloc(tokens[tokens_idx], (lengths[tokens_idx] * sizeof(char)) << 1);
+
+				for (int j = lengths[tokens_idx]; j < lengths[tokens_idx] << 1; j++)
+					tokens[tokens_idx][j] = '\0';
+
+				lengths[tokens_idx] <<= 1;
+			}
+
+			tokens[tokens_idx][token_idx] = sentence[i];
+			token_idx++;
+		}
+	}
+
+	return tokens;
+}
+
 
 void err(char *errmsg)
 {

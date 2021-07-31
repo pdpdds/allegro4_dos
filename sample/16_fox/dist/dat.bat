@@ -180,10 +180,11 @@
 @tool\dat.exe mt32.dat -p DAT_ -h dat3.h
 @tool\dat.exe sound.dat -p DAT_ -h dat4.h
 @tool\dat.exe stage1.dat -p DAT_ -h dat5.h
-@tool\dat.exe font.dat -p DAT_ -h dat6.h
-@..\..\bin\cat.exe dat?.h > dat_tmp.h
-@..\..\bin\awk.exe '!/DAT_COUNT/' dat_tmp.h > dat.h
-@del dat1.h dat2.h dat3.h dat4.h dat5.h dat6.h dat_tmp.h
+@tool\dat.exe stage2.dat -p DAT_ -h dat6.h
+@tool\dat.exe font.dat -p DAT_ -h dat7.h
+@..\..\..\tools\cat.exe dat?.h > dat_tmp.h
+@..\..\..\tools\awk.exe "!/DAT_COUNT/" dat_tmp.h > ../src/dat.h
+@del dat1.h dat2.h dat3.h dat4.h dat5.h dat6.h dat7.h dat_tmp.h
 
 @rem ---------------------------------------------------
 pause

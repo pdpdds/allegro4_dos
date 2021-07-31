@@ -1,6 +1,6 @@
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: opening.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:28 2021 */
 /* Do not hand edit! */
 
 #define DAT_ALLEG_BMP                    0        /* BMP  */
@@ -13,7 +13,7 @@
 
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: intro.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:28 2021 */
 /* Do not hand edit! */
 
 #define DAT_CITY_BMP                     0        /* BMP  */
@@ -40,7 +40,7 @@
 
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: mt32.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:28 2021 */
 /* Do not hand edit! */
 
 #define DAT_01_MID                       0        /* MIDI */
@@ -66,7 +66,7 @@
 
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: sound.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:28 2021 */
 /* Do not hand edit! */
 
 #define DAT_EXPLOD3_WAV                  0        /* SAMP */
@@ -85,7 +85,23 @@
 
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: stage1.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:28 2021 */
+/* Do not hand edit! */
+
+#define DAT_EXPLO2_BMP                   0        /* BMP  */
+#define DAT_EXPLO3_BMP                   1        /* BMP  */
+#define DAT_EXPLO9_BMP                   2        /* BMP  */
+#define DAT_FIRE_BMP                     3        /* BMP  */
+#define DAT_FOX_BMP                      4        /* BMP  */
+#define DAT_STAGE_BMP                    5        /* BMP  */
+#define DAT_STAGE_MAP                    6        /* TXT  */
+#define DAT_STAGE_PAL_BMP                7        /* PAL  */
+#define DAT_STAGE_RES                    8        /* TXT  */
+#define DAT_WEAPON_XML                   9        /* TXT  */
+
+/* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
+/* Datafile: stage2.dat */
+/* Date: Sat Jul 31 23:59:28 2021 */
 /* Do not hand edit! */
 
 #define DAT_EXPLO2_BMP                   0        /* BMP  */
@@ -101,7 +117,7 @@
 
 /* Allegro datafile object indexes, produced by dat v4.2.1, MinGW32 */
 /* Datafile: font.dat */
-/* Date: Sat Nov 10 23:31:56 2018 */
+/* Date: Sat Jul 31 23:59:29 2021 */
 /* Do not hand edit! */
 
 #define DAT_ENG_FNT                      0        /* DATA */

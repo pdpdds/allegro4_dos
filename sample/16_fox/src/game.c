@@ -43,7 +43,10 @@ int StartStage(int stageNum)
 
 	stage_data = load_datafile_callback(file_name, load_data_callback);
 	if (stage_data == NULL) {
-		err("Couldn't load sprite resources!");
+
+		char szErr[1024];
+		sprintf(szErr, "Couldn't load sprite %s resources!", file_name);
+		err(szErr);
 	}
 #endif
 

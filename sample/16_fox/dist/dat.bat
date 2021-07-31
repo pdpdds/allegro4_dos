@@ -102,9 +102,9 @@
 @tool\dat.exe STAGE2.DAT -a stage_pal.bmp -t PAL
 @del stage_pal.bmp
 
-@tool\dat.exe STAGE1.DAT -a res\stage1\stage.res -t TXT
-@tool\dat.exe STAGE1.DAT -a res\stage1\stage.map -t TXT
-@tool\dat.exe STAGE1.DAT -a res\stage1\weapon.xml -t TXT
+@tool\dat.exe STAGE2.DAT -a res\stage2\stage.res -t TXT
+@tool\dat.exe STAGE2.DAT -a res\stage2\stage.map -t TXT
+@tool\dat.exe STAGE2.DAT -a res\stage2\weapon.xml -t TXT
 
 @rem ---------------------------------------------------
 @del MT32.DAT

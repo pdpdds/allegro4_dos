@@ -11,7 +11,7 @@ CPP = gpp.exe
 
 all: main.exe
 
-objs = core.o main.o	   	
+objs = main.o	   	
 
 main.exe : $(objs)
 	gcc -o main.exe $(objs) \

@@ -6,16 +6,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\18_breakout\core.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\sample\18_breakout\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\sample\18_breakout\core.h">
-      <Filter>src</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

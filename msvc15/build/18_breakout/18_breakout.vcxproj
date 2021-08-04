@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\sample\18_breakout\game.cpp" />
     <ClCompile Include="..\..\..\sample\18_breakout\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sample\18_breakout\game.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EC950082-A5EB-4107-8D2B-A1425B38A27C}</ProjectGuid>
@@ -83,7 +87,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
       <Optimization>Disabled</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -100,6 +104,7 @@
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>false</MapExports>
       <AdditionalLibraryDirectories>..\debug</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

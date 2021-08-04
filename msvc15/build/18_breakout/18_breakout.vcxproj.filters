@@ -9,5 +9,13 @@
     <ClCompile Include="..\..\..\sample\18_breakout\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\sample\18_breakout\game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\sample\18_breakout\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

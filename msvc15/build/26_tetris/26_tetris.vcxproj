@@ -11,15 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\sample\26_tetris\src\hiscore.c" />
-    <ClCompile Include="..\..\..\sample\26_tetris\src\piece.c" />
-    <ClCompile Include="..\..\..\sample\26_tetris\src\player.c" />
-    <ClCompile Include="..\..\..\sample\26_tetris\src\tetris.c" />
+    <ClCompile Include="..\..\..\sample\26_tetris\game.cpp" />
+    <ClCompile Include="..\..\..\sample\26_tetris\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\sample\26_tetris\src\data.h" />
-    <ClInclude Include="..\..\..\sample\26_tetris\src\tetris.h" />
-    <ClInclude Include="..\..\..\sample\26_tetris\src\timer.h" />
+    <ClInclude Include="..\..\..\sample\26_tetris\game.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0E0F5D7E-761B-4E99-A957-5E849BDF7E88}</ProjectGuid>

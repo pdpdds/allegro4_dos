@@ -67,15 +67,29 @@ int main()
 }
 
 
-extern void RenderRect(int x1, int y1, int x2, int y2, int r, int g, int b)
+extern void RenderRect(int x1, int y1, int x2, int y2, int r, int g, int b, int fill)
 {
-	rectfill(backBuffer, x1, y1, x2, y2, makecol(r, g, b));
+	if(fill)
+		rectfill(backBuffer, x1, y1, x2, y2, makecol(r, g, b));
+	else
+		rect(backBuffer, x1, y1, x2, y2, makecol(r, g, b));
 }
 
 extern void RenderCircle(int x, int y, int radius, int r, int g, int b)
 {
 	circlefill(backBuffer, x, y, radius, makecol(r, g, b));
 }
+
+extern void RenderLine(int x, int y, int x2, int y2, int r, int g, int b)
+{
+	line(backBuffer, x, y, x2, y2, makecol(r, g, b));
+}
+
+extern void RenderText(int x, int y, char* szMessage)
+{
+	textout_ex(backBuffer, font, szMessage, x, y, makecol(0, 0, 0), -1);
+}
+
 
 #ifdef _WIN32
 END_OF_MAIN()

@@ -207,8 +207,10 @@ void CheckGameEnd()
 	}
 }
 
-extern void RenderRect(int x1, int y1, int x2, int y2, int r, int g, int b); //사각형을 그리는 함수
+extern void RenderRect(int x1, int y1, int x2, int y2, int r, int g, int b, int fill); //사각형을 그리는 함수
 extern void RenderCircle(int x, int y, int radius, int r, int g, int b); // 원을 그리는 함수
+extern void RenderLine(int x, int y, int x2, int y2, int r, int g, int b);
+extern void RenderText(int x, int y, char* szMessage);
 
 void DrawWorld()
 {
@@ -219,7 +221,7 @@ void DrawWorld()
 		{
 			if (g_bricks[x][y] != 0)
 			{
-				RenderRect(x * BRICK_WIDTH, y * BRICK_HEIGHT, (x + 1) * BRICK_WIDTH - BRICK_GAP, (y + 1) * BRICK_HEIGHT - BRICK_GAP, 255, 0, 0);
+				RenderRect(x * BRICK_WIDTH, y * BRICK_HEIGHT, (x + 1) * BRICK_WIDTH - BRICK_GAP, (y + 1) * BRICK_HEIGHT - BRICK_GAP, 255, 0, 0, 1);
 			}
 		}
 	}
@@ -231,5 +233,5 @@ void DrawWorld()
 	}
 
 	// 패들을 화면에 그린다.
-	RenderRect(g_paddle_posx, g_paddle_posy, g_paddle_posx + PADDLE_WIDTH, g_paddle_posy + PADDLE_HEIGHT, 255, 255, 255);
+	RenderRect(g_paddle_posx, g_paddle_posy, g_paddle_posx + PADDLE_WIDTH, g_paddle_posy + PADDLE_HEIGHT, 255, 255, 255, 1);
 }

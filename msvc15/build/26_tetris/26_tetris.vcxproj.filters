@@ -12,9 +12,15 @@
     <ClCompile Include="..\..\..\sample\26_tetris\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\sample\26_tetris\helper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\sample\26_tetris\game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\sample\26_tetris\helper.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,7 @@
 #include <allegro.h>
 #include "game.h"
 
+
 volatile long g_speed_counter = 0; //속도 카운터
 volatile long g_tick_count = 0; //틱 카운트
 
@@ -17,12 +18,11 @@ int now()
 
 END_OF_FUNCTION(increment_speed_counter); //타이머 함수가 끝난다는 것을 명시적으로 설정
 
-BITMAP* backBuffer;
+BITMAP* g_backBuffer = 0;
 
 int main()
 {
 	allegro_init();
-	install_mouse();
 	install_keyboard();
 	install_timer(); //타이머 시스템을 초기화한다
 
@@ -41,11 +41,11 @@ int main()
 	LOCK_VARIABLE(g_speed_counter);
 	LOCK_FUNCTION(increment_speed_counter);
 
-	install_int_ex(increment_speed_counter, BPS_TO_TIMER(30)); //초당 타이머 함수 호출 수(BEAT PER SECOND)
+	install_int_ex(increment_speed_counter, BPS_TO_TIMER(20)); //초당 타이머 함수 호출 수(BEAT PER SECOND)
 
-	backBuffer = create_bitmap(screen->w, screen->h);
+	g_backBuffer = create_bitmap(screen->w, screen->h);
 	
-	if (!backBuffer) 
+	if (!g_backBuffer)
 	{
 		allegro_message("Failed to create double buffer. Out of memory?");
 		exit(1);
@@ -61,13 +61,12 @@ int main()
 		{			
 			ProcessLogic(key[KEY_LEFT], key[KEY_RIGHT], key[KEY_UP], key[KEY_DOWN], key[KEY_SPACE]);
 			g_speed_counter--;
-
 		}
 
-		clear_to_color(backBuffer, makecol(0, 0, 0)); //배경을 푸른색으로 초기화
+		clear_to_color(g_backBuffer, makecol(0, 0, 0)); //배경을 푸른색으로 초기화
 		DrawWorld();
 
-		blit(backBuffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+		blit(g_backBuffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 
 	}
 
@@ -77,12 +76,18 @@ int main()
 
 extern void RenderRect(int x1, int y1, int x2, int y2, int r, int g, int b)
 {
-	rectfill(backBuffer, x1, y1, x2, y2, makecol(r, g, b));
+	rectfill(g_backBuffer, x1, y1, x2, y2, makecol(r, g, b));
 }
 
 extern void RenderCircle(int x, int y, int radius, int r, int g, int b)
 {
-	circlefill(backBuffer, x, y, radius, makecol(r, g, b));
+	circlefill(g_backBuffer, x, y, radius, makecol(r, g, b));
+}
+
+
+extern void RenderText(int x, int y, char* szMessage)
+{
+	textout_ex(g_backBuffer, font, szMessage, x, y, makecol(255, 255, 255), -1);
 }
 
 #ifdef _WIN32

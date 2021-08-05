@@ -11,7 +11,7 @@ CPP = gpp.exe
 
 all: main.exe
 
-objs = main.o game.o	   	
+objs = main.o game.o helper.o	   	
 
 main.exe : $(objs)
 	gcc -o main.exe $(objs) \

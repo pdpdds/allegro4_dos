@@ -12,10 +12,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\sample\26_tetris\game.cpp" />
+    <ClCompile Include="..\..\..\sample\26_tetris\helper.cpp" />
     <ClCompile Include="..\..\..\sample\26_tetris\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\sample\26_tetris\game.h" />
+    <ClInclude Include="..\..\..\sample\26_tetris\helper.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0E0F5D7E-761B-4E99-A957-5E849BDF7E88}</ProjectGuid>
@@ -87,7 +89,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
       <Optimization>Disabled</Optimization>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -105,6 +107,7 @@
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
       <MapExports>false</MapExports>
       <AdditionalLibraryDirectories>..\debug</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

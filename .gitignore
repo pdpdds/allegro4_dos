@@ -28,3 +28,4 @@ Debug/
 *.SWP
 *.o
 *.ipch
+sample/28_agup/lib/release/libagup.a

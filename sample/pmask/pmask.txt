@@ -1,0 +1,331 @@
+----------------------------------------------------------------------------
+OVERVIEW:
+----------------------------------------------------------------------------
+
+This is beta 1 of version 5 of the Pixel Mask (PMASK) library.  
+
+PMASK is a C library for doing pixel perfect collisions using bitmasks.  
+It is intended to be extremely fast and easy to use.  This library currently 
+supports Allegro BITMAPs and SDL Surfaces.  
+
+Starting with version 5, this library has split into two parts.  The 
+original PMASK portion, which handles optimized pixel-perfect collision 
+detection between pairs of sprite masks, and COLLIST which handles the 
+higher-level functionality of optimized collision detection with lists of 
+collidable bounding boxes and/or sprite masks.  This file describes the 
+original PMASK portion - look in collist.txt if you want info about the 
+collision lists stuff.  
+
+The example program test.c demonstrates how to use the PMASK pixel-perfect 
+collision detection functions.  It requires the files a.bmp and b.bmp.  The 
+other examples are for COLLIST (see collist.txt).  
+
+----------------------------------------------------------------------------
+Version History:
+----------------------------------------------------------------------------
+
+Version 5:
+	added additional functions for manipulating masks
+	object-list stuff:
+		seperated code into independant library (collist.c / .h)
+		improved documentation (collist.txt)
+		major API changes
+                major optimizations (100% speed improvement?)
+		improved example program
+        seperated collision lists stuff into seperate library - ColList
+                (see collist.txt)
+	optimized check_pmask_collision (15% speed improvement?)
+	fixed bug in serialization functions
+	optimized draw_allegro_pmask (500% speed improvement?)
+
+Version 4:
+	added object-list functions
+	added example program for object-list functions
+
+Version 3:
+	fixed a memory leak in create_allegro_pmask / create_sdl_pmask
+	added serialization functions
+
+Version 2: 
+        changed init_allegro_pmask / init_sdl_pmask to match docs
+	fixed numerous bugs in the documentation
+	added drawing functions (allegro only, no SDL support)
+	added example program
+
+Version 1: 
+	initial release
+	supports Allegro BITMAPs and SDL Surfaces, but does not require them
+	raw PMASK access ( get_pmask_pixel / set_pmask_pixel )
+	compile-time option to determine the integer type used for raw data
+	compile-time option to post-pend binary data on to the PMASK struct
+	API supports in-place or allocated PMASKs
+	wrote documentation
+	plain portable C
+
+----------------------------------------------------------------------------
+USAGE, PART 1: How to code with PMASK
+----------------------------------------------------------------------------
+
+The primary datatype this library works with is a struct named "PMASK".
+This struct has 3 members, "w", "h", and "mask".  The first 2 members
+are the width and height of the mask, the third is an array of binary
+data used internally by the library.  Each "PMASK" struct is effectively
+a "w" by "h" bitmap with only 2 possible colors (1 bit per pixel).  
+
+Suppose you have 2 Allegro BITMAPs named "bmp1" and "bmp2", and you want to
+do pixel-perfect collisions for these bitmaps using the PMASK library.  You
+start by creating masks for each sprite.  There are 2 different ways to do
+this.
+
+Method 1: Using Create
+        //create masks
+        struct PMASK *mask1, *mask2;
+        mask1 = create_allegro_pmask(bmp1);
+        mask2 = create_allegro_pmask(bmp2);
+        //use the masks for a while
+        blah, blah, blah...
+        //delete masks
+        destroy_pmask(mask1);
+        destroy_pmask(mask2);
+
+Method 2: Using Init
+        //create masks
+        struct PMASK mask1, mask2;
+        init_allegro_pmask(&mask1, bmp1);
+        init_allegro_pmask(&mask2, bmp2);
+        //use the masks for a while
+        blah, blah, blah...
+        //delete masks
+        deinit_pmask(&mask1);
+        deinit_pmask(&mask2);
+
+(needless to say, this is for Allegro BITMAPs... is you prefer SDL
+Surfaces, replace "allegro" with "sdl")
+
+Now you know how to get your masks, and how to get rid of them.  The main
+thing left is, how do you use them?  Lets say you're drawing "bmp1" on the
+screen at 10,10 and "bmp2" at 20,15.  Then you check to see if they're
+colliding like this:
+        if (check_pmask_collision(mask1, mask2, 10,10, 20,15)) {
+                //they collided.  do something
+        }
+        else {
+                //they didn't collide.  do something else
+        }
+
+----------------------------------------------------------------------------
+USAGE, PART 2: Extra features of PMASK
+----------------------------------------------------------------------------
+
+Drawing Functions:
+    The drawing features of PMASK may be useful to you for debugging or 
+    rendering purposes.  PMASK does not offer this functionality with 
+    SDL yet, only Allegro.  PMASK provides two drawing functions:
+      void draw_allegro_pmask 
+        ( const PMASK *mask, BITMAP *destination, int x, y, color)
+      void draw_allegro_pmask_stretch
+        ( const PMASK *mask, BITMAP *destination, int x, y, w, h, color)
+
+Collision Location Reporting:
+    There is an alternate version of check_pmask_collision which will 
+    tell you where two pmasks collided in addition to whether or not
+    they collided.  The "result" parameter is a pointer at an array of
+    two integers - the X coordinate gets put into the first and the Y
+    coordinate into the second of those integers.  Asside from that,
+    this function acts just like the regular check_pmask_collision:
+    int check_pmask_collision_position
+      (
+      const PMASK *mask1, const PMASK *mask2,
+      int x1, int y1, int x2, int y2,
+      int *result
+      )
+
+Raw Functions:
+    PMASK also permits you to create collision masks without a sprite.  
+    You can call create_pmask(width, height) or init_pmask(&mask1, 
+    width, height) to get your mask.  Then you can use 
+    set_pmask_pixel(mask1, x, y, solid) to manuually draw a shape on to 
+    your mask.  If "solid" is non-0 then that pixel will be collidable 
+    (i.e. solid), if it is 0 then that pixel will not be collidable.  
+    Be warned that PMASKs created / initialized in this way may contain 
+    random garbage.  get_pmask_pixel does the reverse - it returns 0 if a 
+    pixel is uncollidable and 1 if it is collidable.  
+    _get_pmask_pixel / _set_pmask_pixel are inline versions of those two 
+    functions.  No bounds checking is performed with any version.  
+
+High Level Raw Functions:
+    In addition to drawing using set_pmask_pixel, you can also modify 
+    collision masks using higher level functions.  The functions in 
+    in this category currently implemented are:
+      void clear_pmask 
+        ( PMASK *mask );
+      void fill_pmask
+        ( PMASK *mask, int value );
+      void pmask_operation_or 
+        ( PMASK *destination, const PMASK *source, int x, int y );
+      void pmask_operation_andnot 
+        ( PMASK *destination, const PMASK *source, int x, int y );
+      void pmask_operation_not 
+        ( PMASK *destination );
+      int pmask_count_solid_pixels 
+        ( const PMASK *mask );
+
+Serialization Functions:
+    PMASK also provides serialization helpers.  These functions can 
+    convert a PMASK in to a block of raw bytes suitable for transmission 
+    over a network or writting to a disk.  And they can reverse that 
+    transformation, changing a block of raw bytes back into a PMASK.  
+      int serialize_pmask
+        ( void *destination, int maxsize, PMASK *source )
+      int init_deserialize_pmask
+        ( void *source, int maxsize, PMASK *destination )
+      PMASK *create_deserialize_pmask
+        ( void *source, int maxsize, int *size )
+
+----------------------------------------------------------------------------
+USAGE, PART 3: You should already know this....
+----------------------------------------------------------------------------
+
+In order to use PMASK, you have to have to do three things:
+1.  Compile pmask.c (and optionally collist.c)
+2.  "include" the file pmask.h (and optionally collist.h)
+3.  Link with the compiled version of pmask (and/or collist)
+
+Steps 1 and 3 are compiler-dependant.  Step 1 only needs to be done once,
+whereas steps 2 and 3 need to be done for every program you write that
+uses PMASK.
+
+Step 2 is done by adding a line that looks like either this:
+#include "pmask.h"
+or this:
+#include <pmask.h>
+at the top of your source code.  The first one is used if you put
+pmask.h in the same directory as your source code.  The second
+is used if you put pmask.h in a standard include directory.  A
+typical standard include directory for DJGPP (gcc/DOS) would be
+c:\djgpp\include.  A typical standard include directory for Visual
+C++ 6.0 would be c:\Program Files\Microsoft Visual Studios\VC98\include.
+The location of the standard include directory(ies) will vary depending
+upon your compiler and installation options.
+
+Steps 1 & 3 are closely related.  You can either compile & link with
+PMASK as if it were part of your program, or you can compile & link
+with it as a library.  To compile and link with it as part of your
+program from most IDEs, just add it to your projects list of source
+files.  For example, in Visual C++ you would select the "Projects"
+menu, the "add to project" sub-menu, the "files" options.  Then you
+would select the file "pmask.c" and click "Okay".  Once pmask.c is in
+your project, your IDE should automatically make sure that pmask.c
+gets compiled and linked.
+(er... IDE stands for Integrated Development Environment... basically,
+it's a program like Visual Studios or Dev-C++ or RHIDE or somesuch
+that makes it easier to use your compiler, linker, and debuggers)
+
+----------------------------------------------------------------------------
+PORTABILITY & PLATFORMS:
+----------------------------------------------------------------------------
+
+This library is written in plain C, and should work on all compilers.
+It should work on machines irregardless of their pointer sizes, integer
+sizes, and endianness.  This is all hypothetical: it has only been tested
+on x86 using MS VC++ 7.1 and DJGPP (gcc 4.1 / DOS).  
+
+PMASK uses the "const" keyword as appropriate.  Some compilers don't support 
+this in C.  If your compiler doesn't like this, edit pmask.h, find the line 
+that says "#define PMASK_CONST const" and comment it out by adding a "//" at 
+the begining of it.  
+
+One known portability issue remains to be fixed: the serial binary data of 
+the (de)serialization functions is not portable across platforms with 
+different sizes of "short int".  If you need this fixed, let me know.  This 
+issue will not effect you unless you call a function with "serialize" in the 
+name, and you do so on multiple platforms, and you exchange data between 
+those platforms.  
+(the portions of the code that are Allegro specific also depend upon integer 
+sizes to some extent, but Allegro itself depends upon integer sizes so 
+there's no reason to change that)
+
+By default, Allegro support is enabled and SDL support is disabled (SDL
+support is untested, but compiles fine).  To enable SDL support, uncomment 
+the line "#define PMASK_USE_SDL" near the top of pmask.h and then recompile 
+pmask.c.  To disable Allegro support, comment out the line 
+"#define PMASK_USE_ALLEGRO" near the top of pmask.h and then recompile 
+pmask.c.  PMASK can work with any combination; both enabled, both disabled, 
+or either one enabled.  If both are disabled then you'll have only the raw 
+methods left to generate your bitmasks with though.  
+
+----------------------------------------------------------------------------
+PERFORMANCE TWEAKING:
+----------------------------------------------------------------------------
+
+I cannot imagine a situation in which a modern game would be limited, even
+a little bit, by the speed of doing pixel-perfect collisions.  However, this
+library is intended to be the fastest pixel-perfect collision library ever,
+so if for some insane reason you're interested in tweaks that this library
+supports, here's the information you're looking for.  
+
+This library has 2 main settings to be adjusted for performance.  The
+simpler one is the data type that it works with internally.  In the default
+configuration, it uses 32-bit words.  You can, however, alter it to use 64
+bit words (or 16, or whatever) on most compilers.  This is a compile-time 
+setting, and cannot be modified at run-time.  If you change it to using 
+64-bit words, it MAY run faster, depending upon how smart the compiler is 
+and what the target instruction set is.  Be warned, however, that using 
+larger word sizes internal may slightly increase memory usage, particularly 
+for extremely small sprites, since the number of data elements used is 
+rounded up to an integer value at the end of every row.  On x86, it might be 
+able to go faster if the compiler knows how to use MMX registers for 64-bit 
+integers (PMASK only ever do shifts, bit-wise ands, and bit-wise ors, so MMX 
+registers can be used efficiently, I think).  On other platforms, it's 
+unlikely to go faster that way unless they have 64-bit General Purpose 
+Registers.  If 128 bit or 256 bit unsigned integer types are available, you 
+can try those too.  
+
+The second adjustable performance setting is more complicated, even though 
+it has only 2 states: on and off.  There is a #define in pmask.h that is 
+commented out, called MASK_SINGLE_MEMORY_BLOCK.  If you uncomment it, then 
+PMASK will change the way it allocates memory and the way it lays out the 
+structs.  This may speed up masks, IF you create your masks using calls to 
+create_allegro_pmask or create_sdl_pmask or create_pmask.  However, this 
+will completely break functions like init_allegro_pmask, init_sdl_pmask, 
+and init_pmask.  Those functions will do terrible evil things that will 
+crash your program if you call them with the MASK_SINGLE_MEMORY_BLOCK 
+option enabled, unless you really really really know exactly what you're 
+doing.  Whether the create_* functions or init_* functions are faster 
+depends upon what exactly your program does.  Also, if this option is 
+enabled then the code will be slightly less portable, though it's still 
+likely to work on any platform with a decent C compiler.  
+
+----------------------------------------------------------------------------
+Future Plans:
+----------------------------------------------------------------------------
+
+The current PMASK code is sub-optimal for large objects.  I have an 
+expiremental version working with some changes to make it better for large 
+objects.  If empirical testing shows that those changes work well with 
+normal-sized objects as well then they may eventually be merged in to 
+PMASK version 6 or 7.  
+
+If SDL users ever start actually using PMASK then I'll add SDL equivalents 
+of the Allegro drawing functions.  
+
+Eventually the create_* and init_* functions might get optimized.  Maybe.  
+It's generally not worth the effort since almost nothing goes around 
+creating PMASKs continuously at run-time.  
+
+If I got REALLY enthusiastic I suppose I could write an optimized assembly 
+version of check_pmask_collision using MMX or something, but that will 
+probably never happen.  
+
+COLLIST will remain a seperate library.  It will get lots of improvements, 
+but they won't be listed here.  
+
+----------------------------------------------------------------------------
+LICENSE:
+----------------------------------------------------------------------------
+
+Use PMASK for anything you want.  Open-source, closed-source, free,
+commercial, I don't mind.  I release my work upon this to the public
+domain.  
+
+orz

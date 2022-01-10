@@ -1,0 +1,223 @@
+----------------------------------------------------------------------------
+COLLIST: What is it?
+----------------------------------------------------------------------------
+
+
+COLLIST is a C library for dealing with collision lists.  
+
+COLLIST implements highly efficient optimized bounding box collision 
+detection for dealing with sets of bounding boxes.  It uses PMASKs 
+pixel-pefect collisions as a "second pass", but that can be easily 
+disabled if you prefer to just use raw bounding-box collisions, or if 
+you want to supply your own "second pass" collision detection.  
+
+Basically, to summarize what this library does, you give it a list of 
+objects with bounding boxes, and it gives you a list of collisions.  
+This is usually better than checking for collisions yourself, because 
+this library uses "better than O(n^2)" algorithms so that it doesn't 
+have to check every pair of objects for collisions.  For an idea of
+the performance offered, take a look at the example program.  
+
+
+----------------------------------------------------------------------------
+Version History:
+----------------------------------------------------------------------------
+
+
+ColList Version 0.90:
+        seperated the ColList library from the PMask library
+        improved documentation (collist.txt)
+        major API changes
+        major optimizations (100% speed improvement?)
+        improved example program
+
+PMask version 4:
+        initial API for bounding-box collision detection with callbacks
+
+
+----------------------------------------------------------------------------
+COLLIST: So... how do I use it?
+----------------------------------------------------------------------------
+
+
+COLLIST_ITEM is defined like this:
+
+struct COLLIST_ITEM {
+	float x, y, w, h;
+	void *userdata;
+};
+
+The first four items correspond to the bounding box of your object.  
+x and y are the upper left-hand corner coordintes.  w and h are the 
+width and height of the bounding box.  
+
+The "userdata", as mentioned earlier, is an identifier for the object, and 
+can be anything at all so long as your item-getting and collision-handling 
+callback functions know how to understand the identifiesr you use.  
+
+
+There are 6 types of interaction with the COLLIST library:
+
+1. Initialization: call create_collist
+	This should happen first, and generally only needs to happen once.  
+Pretty easy.  To initialize the library, you call create_collist, and pass 
+it a pointer at the item-getting callback function.  Basically what that 
+is is a function that you define which COLLIST calls whenever if needs data 
+about one of your objects.  That function mediates between your programs 
+data and COLLISTs data.  I'll discuss what you need to do about that later 
+(see #3 below).  Anyway, create_collist returns a pointer at a COLLIST_LIST 
+struct.  You don't need to look at any of the data in the COLLIST_LIST, you 
+just need to pass it to all the later functions.  Oh yeah, there's a 
+destroy_collist function to, but who cares?  
+
+2.  Object Creation: call add_to_collist
+	Each time you create a new collidable object, you should call the 
+add_to_collist function.  You pass it a COLLIST_LIST pointer and some 
+kind of identifier for the freshly created object.  Object identifiers take 
+the form of a void pointer.  Generally, I would recommend that you use a 
+pointer at your objects data.  However, they don't HAVE to be valid 
+pointers or anything; you could use integers if you prefer, and just cast 
+them to void pointers.  Identifiers need to be unique, and they need to be 
+castable to void pointers and back without loss of information.  Those are 
+the only requirements.  
+
+3.  Object Data Mediation: the item-getting callback function
+	Obviously, COLLIST can't tell if your objects are colliding from 
+just their identifiers; it needs more information than that.  That's where 
+this function comes in.  You must define a function which takes a pointer 
+at a COLLIST_ITEM struct.  When COLLIST needs to know some data about one 
+of your objects, it will call this function and pass the address of the 
+COLLIST_ITEM where you should stick the data.  That COLLIST_ITEM will 
+already have the member variable "userdata" set to one of the identifiers 
+that you passed to add_to_collist.  You should then fill in the other 
+member variables of COLLIST_ITEM with data about the object which userdata 
+identifies.  The member variables include bounding box data and a pointer 
+at a PMASK.  This is the function that you passed to create_collist during 
+initialization (see #1 above).  
+
+4.  Requesting Collisions: call do_collist_collisions
+	This one is simple - when you want to check for collisions, call 
+do_collist_collisions.  The first parameter should be the COLLIST_LIST 
+pointer that was returned by the call to create_collist during 
+initialization.  The second parameter should be the collision callback 
+function discussed in #5 below.  Use NULL for the third parameter 
+(just forget about the third parameter... it's not really useful... 
+most of the time anyway).  
+
+5.  Recieving Collisions: the collisions callback function
+	You must also declare a collision callback function to recieve 
+lists of collisions.  When you call do_collist_collisions as described in 
+#4 above, you pass the address of your collision callback function.  If 
+do_collist_collisions detects one or more collisions, it will call this 
+function.  This function accepts as parameters an integer and a pointer at 
+an array of void pointers.  The integer is a number of collisions which 
+you are being notified of.  The array of void pointers contains... pairs 
+of void pointers.  How many pairs?  One pair per collision.  These void 
+pointers are in fact, the identifiers that you passed to add_to_collist 
+earlier.  Thus, what you have here is the identifiers of the objects that 
+collided.  Hopefully you have something meaningful to do with these 
+identifiers; that's not COLLISTs job, but the example program does include 
+some simplified newtonian mechanics if that's your cup of tea.  
+
+6.  Object destruction: bleh
+	Object destruction is a little weirder than object creation.  From 
+how add_to_collist worked, you might expect that you could remove an object 
+just by calling remove_from_collist and passing it a COLLIST_LIST pointer 
+and an identifier for the object to remove.  In fact, technically, you're 
+right.  That will work.  Unfortunately, that's kinda slow if you do a lot 
+of object destruction.  That's why there's an alternate, faster version.  
+However, the faster version can only be used by the item-getting callback 
+function, and only when that function is called for the object that you 
+want to delete.  The alternate version is called 
+remove_from_collist_during_callback.  
+
+
+----------------------------------------------------------------------------
+PORTABILITY & PLATFORMS:
+----------------------------------------------------------------------------
+
+
+Mostly portable.  
+
+
+----------------------------------------------------------------------------
+LIMITATIONS:
+----------------------------------------------------------------------------
+
+
+COLLIST is completely unaware of things like "time" and "velocity".  It 
+will detect if two objects overlap, but it can not detect if they pass 
+through each other between ticks.  That is, if objects are at velocities 
+high enough then they have the potential to pass right through objects that 
+are small relative to the distance that they move per physics tick.  In the
+next release, I'll add an example showing the use of sweep tests with this
+library to catch collisions that otherwise would be missed.  
+
+COLLIST imposes no limits on object size.  COLLIST will always find all 
+bounding box collisions accurately (to the limit of single-precision 
+floating point math anyway), regardless of of object size and position.  
+
+COLLIST can be inefficient sometimes when dealing with maps that MUCH wider 
+than they are tall, or much taller than they are wide.  Usually not very 
+inefficient though.  
+
+There is no maximum number of objects, except that the number must not 
+overflow a signed integer.  
+
+
+----------------------------------------------------------------------------
+EXTRA OPTIONS:
+----------------------------------------------------------------------------
+
+
+Some versions of ColList supported wrapping coordinates, but this version
+does not.  Hopefully this feature will be added back at some time in the
+future.  
+
+
+----------------------------------------------------------------------------
+PERFORMANCE TWEAKING:
+----------------------------------------------------------------------------
+
+
+As mentioned earlier, if you delete objects using remove_from_collist 
+frequently then you should switch to using 
+remove_from_collist_during_callback.  Also, at the moment, add_to_collist 
+can be kinda slow if called many times in a single frame.  At the moment, 
+the only way to speed that up is by calling update_collist(collist) on 
+ticks that involved excessively large numbers of additions or slow 
+removals.  These performance issues will be addressed in a future version 
+of this library.  
+
+If you want the maximum control over how collision detection is done, you 
+can call _do_collist_collisions instead of the regular 
+do_collist_collisions.  This version has two extra parameters, 
+"sort_algorithm" and "complexity".  "sort_algorithm" should usually be 
+SORT_BUBBLE, but if your objects are changing VERY fast (usually due to 
+large numbers of objects added per tick) then SORT_QSORT can be faster.  
+"complexity" is a parameter used internally.  Use 0 to let COLLIST 
+autodetect an appropriate complexity, 1 to have it use low complexity 
+(fastest when there are few objects), and higher numbers if you have very 
+large numbers of objects or if your map axis are extremely unbalanced.  
+Generally, complexity should be proportional to the square root of the 
+number of objects.  
+
+
+----------------------------------------------------------------------------
+CREDITS:
+----------------------------------------------------------------------------
+
+
+COLLIST was written by orz.  
+
+
+----------------------------------------------------------------------------
+LICENSE:
+----------------------------------------------------------------------------
+
+
+Use COLLIST for anything you want.  Open-source, closed-source, free, 
+commercial, I don't mind.  I release my work upon this to the public 
+domain.  
+
+orz

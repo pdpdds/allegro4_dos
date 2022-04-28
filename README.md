@@ -74,7 +74,8 @@ After completing this test, we will now create the DOS binary.
 
 <img src="./img/4.jpg">
 
-- Final check through DOSBox
+- Final check through DOSBox. 
+- execute dosbox.bat
 <img src="./img/5.jpg">
 
 If you've been to this point, 

@@ -64,15 +64,15 @@ After completing this test, we will now create the DOS binary.
 
 ## Build DOS Program
 - Source code build with DJGPP
-- you must download djgpp build system. you can find it in github release tab.
-- copy it to source code folder
+- you must download djgpp build system. you can find djgpp.rar in github release tab.
+- extract djgpp.rar and copy it to source code folder
 
 <img src="./img/5.png">
 
-<img src="./img/4.jpg">
-
 - execute djgpp.bat and you will see cmd shell.
 - move to source code folder, for example 1_helloworld folder then enter make.
+
+<img src="./img/4.jpg">
 
 - Final check through DOSBox
 <img src="./img/5.jpg">

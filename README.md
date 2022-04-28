@@ -1,5 +1,5 @@
 ## allegro4_dos
-dos / win32 cross platform development environment
+dos / win32 cross platform development environment in Windows 10 or higher
 
 ## Purpose  
   The purpose of this system is to make an app that works easily and conveniently in DOS. 
@@ -47,7 +47,7 @@ We have outlined the WIN32 / DOS programming complete system.
 So this system may not be feeling well yet. 
 Let's take a look at some examples before we explain how to use them.
 
-## Build WIN32
+## Build WIN32 Program
  - Program development with visual studio
  - You can find dos_dev solution file in msvc15/build folder
   
@@ -62,7 +62,7 @@ Let's take a look at some examples before we explain how to use them.
 
 After completing this test, we will now create the DOS binary.
 
-## Build DOS
+## Build DOS Program
 - Source code build with DJGPP
 - you must download djgpp build system. you can find it in github release tab.
 - execute djgpp.bat and you will see cmd shell.

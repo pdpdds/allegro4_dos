@@ -76,6 +76,11 @@ After completing this test, we will now create the DOS binary.
 
 - Final check through DOSBox. 
 - execute dosbox.bat
+'''
+cd 1_hell~1
+main
+'''
+
 <img src="./img/5.jpg">
 
 If you've been to this point, 

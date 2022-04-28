@@ -83,6 +83,8 @@ main
 
 <img src="./img/5.jpg">
 
+copy cwsdpmi.exe to folder to execute another sample. you can find it in 1_helloworld folder.
+
 If you've been to this point, 
 I think you understand the concept of this system.
 If you are interested in creating a DOS program, believe it and try it out.

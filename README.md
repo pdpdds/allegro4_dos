@@ -1,7 +1,7 @@
-# allegro4_dos
-dos / win32 cross platform development environment
+## allegro4_dos
+dos / win32 cross platform development environment in Windows 10 or higher
 
-1. Purpose  
+## Purpose  
   The purpose of this system is to make an app that works easily and conveniently in DOS. 
   There are Watcom C / C ++ and Trubo C ++ that allow DOS programs to be created. 
   However, I think that creating programs with DOS-style coding style is going to reverse the times. 
@@ -10,7 +10,7 @@ dos / win32 cross platform development environment
   Of course, there are some limitations, but if you are able to create DOS programs with the latest methods 
   and if DOS programs come out one by one, I think DOS will continue to maintain its vitality.
 
-2. WIN32 / DOS Programming Complete System Features
+## WIN32 / DOS Programming Complete System Features
  - Create programs that run on WIN32 and DOS as one source
  - Program development with Visual Studio 2019
  - Visual Studio 2019 enables proactive debugging and app tuning
@@ -20,7 +20,7 @@ dos / win32 cross platform development environment
 you do not have to worry about the DOS platform.
  and You can easily create a DOS program.
 
-3. Sample Source
+## Sample Source
  - There are a few sample sources in the system, and we will continue to add samples in the future.
  
  
@@ -47,7 +47,7 @@ We have outlined the WIN32 / DOS programming complete system.
 So this system may not be feeling well yet. 
 Let's take a look at some examples before we explain how to use them.
 
-4. Development Procedure
+## Build WIN32 Program
  - Program development with visual studio
  - You can find dos_dev solution file in msvc15/build folder
   
@@ -62,10 +62,15 @@ Let's take a look at some examples before we explain how to use them.
 
 After completing this test, we will now create the DOS binary.
 
+## Build DOS Program
 - Source code build with DJGPP
--  you must download djgpp build system. you can find it in github release tab.
-  
+- you must download djgpp build system. you can find it in github release tab.
 <img src="./img/4.jpg">
+
+- execute djgpp.bat and you will see cmd shell.
+- move to source code folder, for example 1_helloworld folder then enter make.
+  
+<img src="./img/5.png">
 
 - Final check through DOSBox
 <img src="./img/5.jpg">

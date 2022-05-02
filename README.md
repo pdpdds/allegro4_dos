@@ -1,8 +1,9 @@
 ## allegro4_dos
-dos / win32 cross platform development environment in Windows 10 or higher
+dos / win32 cross platform development environment in Windows 10 or higher.  
+Now, This system supports building DOS programs even in a Linux environment.  
 
 ## Document
-[Allegro4 DOS Progrmamming](https://wikidocs.net/book/6637), Korean, Juhang Park.
+[Allegro4 DOS Game Progrmamming Guide](https://wikidocs.net/book/6637), Korean, Juhang Park.
 
 ## Purpose  
   The purpose of this system is to make an app that works easily and conveniently in DOS.   
@@ -66,11 +67,12 @@ Let's take a look at some examples before we explain how to use them.
 After completing this test, we will now create the DOS binary.
 
 ## Build DOS Program
-- Source code build with DJGPP
 - you must download djgpp build system. you can find djgpp.rar in github release tab.
 - extract djgpp.rar and copy it to source code folder
 
 <img src="./img/5.png">
+
+### In Windows
 
 - execute djgpp.bat and you will see cmd shell.
 - move to source code folder, for example 1_helloworld folder then enter make.
@@ -80,12 +82,20 @@ After completing this test, we will now create the DOS binary.
 - Final check through DOSBox. 
 - execute dosbox.bat
 ```
-cd 1_hell~1
-main
+cd sample/1_hell~1
+make
 ```
 
 <img src="./img/5.jpg">
 
+### Linux
+- wsl2, ubuntu 20.04 LTS tested
+- execute below command  
+```
+. setenv
+cd sample/1_helloworld
+make
+```
 copy cwsdpmi.exe to folder to execute another sample. you can find it in 1_helloworld folder.
 
 If you've been to this point, 

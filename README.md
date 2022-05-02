@@ -1,5 +1,6 @@
 ## allegro4_dos
-dos / win32 cross platform development environment in Windows 10 or higher
+dos / win32 cross platform development environment in Windows 10 or higher.  
+Now, This system supports building DOS programs even in a Linux environment.  
 
 ## Document
 [Allegro4 DOS Progrmamming](https://wikidocs.net/book/6637), Korean, Juhang Park.

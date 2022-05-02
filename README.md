@@ -5,10 +5,10 @@ dos / win32 cross platform development environment in Windows 10 or higher
 [Allegro4 DOS Progrmamming](https://wikidocs.net/book/6637), Korean, Juhang Park.
 
 ## Purpose  
-  The purpose of this system is to make an app that works easily and conveniently in DOS. 
+  The purpose of this system is to make an app that works easily and conveniently in DOS.   
   There are Watcom C / C ++ and Trubo C ++ that allow DOS programs to be created. 
   However, I think that creating programs with DOS-style coding style is going to reverse the times. 
-  WIN32 / DOS Programming complete system allows you to use the C/C++ language 
+  WIN32 / DOS Programming complete system allows you to use the C/C++ language  
   while developing with Visual Studio, the most powerful IDE on the Windows operating system. 
   Of course, there are some limitations, but if you are able to create DOS programs with the latest methods 
   and if DOS programs come out one by one, I think DOS will continue to maintain its vitality.
@@ -19,9 +19,9 @@ dos / win32 cross platform development environment in Windows 10 or higher
  - Visual Studio 2019 enables proactive debugging and app tuning
  - Create DOS binaries via DJGPP and test your app with DOSBox
 
-  If you are familiar with programming, 
+If you are familiar with programming, 
 you do not have to worry about the DOS platform.
- and You can easily create a DOS program.
+and You can easily create a DOS program.
 
 ## Sample Source
  - There are a few sample sources in the system, and we will continue to add samples in the future.

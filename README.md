@@ -1,6 +1,9 @@
 ## allegro4_dos
 dos / win32 cross platform development environment in Windows 10 or higher
 
+## Document
+[Allegro4 DOS Progrmamming](https://wikidocs.net/book/6637), Korean, Juhang Park.
+
 ## Purpose  
   The purpose of this system is to make an app that works easily and conveniently in DOS. 
   There are Watcom C / C ++ and Trubo C ++ that allow DOS programs to be created. 

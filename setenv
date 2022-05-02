@@ -1,0 +1,1 @@
+export DJGPP_GCC=$(pwd)/djgpp_linux/bin/i586-pc-msdosdjgpp-gcc

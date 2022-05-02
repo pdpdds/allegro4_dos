@@ -66,11 +66,12 @@ Let's take a look at some examples before we explain how to use them.
 After completing this test, we will now create the DOS binary.
 
 ## Build DOS Program
-- Source code build with DJGPP
 - you must download djgpp build system. you can find djgpp.rar in github release tab.
 - extract djgpp.rar and copy it to source code folder
 
 <img src="./img/5.png">
+
+### In Windows
 
 - execute djgpp.bat and you will see cmd shell.
 - move to source code folder, for example 1_helloworld folder then enter make.
@@ -81,11 +82,19 @@ After completing this test, we will now create the DOS binary.
 - execute dosbox.bat
 ```
 cd 1_hell~1
-main
+make
 ```
 
 <img src="./img/5.jpg">
 
+### Linux
+- wsl2, ubuntu 20.04 LTS tested
+- execute below command  
+```
+. setenv
+cd sample/1_helloworld
+make
+```
 copy cwsdpmi.exe to folder to execute another sample. you can find it in 1_helloworld folder.
 
 If you've been to this point, 

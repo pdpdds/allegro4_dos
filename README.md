@@ -3,7 +3,7 @@ dos / win32 cross platform development environment in Windows 10 or higher.
 Now, This system supports building DOS programs even in a Linux environment.  
 
 ## Document
-[Allegro4 DOS Progrmamming](https://wikidocs.net/book/6637), Korean, Juhang Park.
+[Allegro4 DOS Game Progrmamming Guide](https://wikidocs.net/book/6637), Korean, Juhang Park.
 
 ## Purpose  
   The purpose of this system is to make an app that works easily and conveniently in DOS.   

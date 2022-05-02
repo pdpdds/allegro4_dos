@@ -1,13 +1,17 @@
-CFLAGS = -I. -I..\..\allegro\include
-LDFLAGS = -L..\..\allegro\lib
+CFLAGS = -I. -I../../allegro/include
+LDFLAGS = -L../../allegro/lib
 
-# -------- 실행 프로그램 이름 입력 --------
+
+CC=$(DJGPP_GCC)
+
+
+# -------- executable file name --------
 PROGRAM = main
 
-# -------- 컴파일시킬 소스 파일들 --------
+# -------- source file --------
 SRC = $(PROGRAM).c
 
-# -------- 기본적인 컴파일 --------
+# -------- basic compile --------
 all: $(PROGRAM).c
 	@echo BUILD... $(PROGRAM).exe 
-	gcc $(CFLAGS) $(LDFLAGS) $(SRC) -o $(PROGRAM).exe -lalleg
+	$(CC) $(CFLAGS) $(LDFLAGS) $(SRC) -o $(PROGRAM).exe -lalleg

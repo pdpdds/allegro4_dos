@@ -20,6 +20,7 @@ msvc15/build/.vs/dos_dev/v16/.suo
 *.lib
 allegro/
 djgpp/
+djgpp_linux/
 djgpp.bat
 dosbox.bat
 dosbox/

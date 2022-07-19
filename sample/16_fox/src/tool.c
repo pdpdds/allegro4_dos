@@ -415,8 +415,8 @@ int string_to_int_list (const char *str, const char *tok, List *list)
 
 char* str(int size) {
 	char* string = (char*)malloc(sizeof(char) * size);
-
-	for (int i = 0; i < size; i++)
+	int i;
+	for (i = 0; i < size; i++)
 		string[i] = '\0';
 
 	return string;
@@ -428,21 +428,21 @@ char** split(char* sentence, char separator, int* num_tokens) {
 	int tokens_idx = 0;
 	int token_idx = 0;
 	*num_tokens = 1;
-
-	for (int i = 0; i < strlen(sentence); i++) {
+	int i;
+	for (i = 0; i < strlen(sentence); i++) {
 		if (sentence[i] == separator)
 			(*num_tokens)++;
 	}
 
 	lengths = (int*)malloc(sizeof(int) * (*num_tokens));
 	tokens = (char**)malloc(sizeof(char*) * (*num_tokens));
-
-	for (int i = 0; i < *num_tokens; i++) {
+	
+	for (i = 0; i < *num_tokens; i++) {
 		tokens[i] = str(INIT_SIZE);
 		lengths[i] = INIT_SIZE;
 	}
-
-	for (int i = 0; i < strlen(sentence); i++) {
+	
+	for (i = 0; i < strlen(sentence); i++) {
 		if (sentence[i] == separator && strlen(tokens[tokens_idx]) != 0) {
 			token_idx = 0;
 			tokens_idx++;
@@ -455,8 +455,8 @@ char** split(char* sentence, char separator, int* num_tokens) {
 
 			if (strlen(tokens[tokens_idx]) == lengths[tokens_idx] - 1) {
 				tokens[tokens_idx] = realloc(tokens[tokens_idx], (lengths[tokens_idx] * sizeof(char)) << 1);
-
-				for (int j = lengths[tokens_idx]; j < lengths[tokens_idx] << 1; j++)
+				int j;
+				for (j = lengths[tokens_idx]; j < lengths[tokens_idx] << 1; j++)
 					tokens[tokens_idx][j] = '\0';
 
 				lengths[tokens_idx] <<= 1;

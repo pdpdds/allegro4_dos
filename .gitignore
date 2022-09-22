@@ -2,7 +2,7 @@
 *.db
 *.db-wal
 *.db-shm
-msvc15/build/.vs/dos_dev/v16/.suo
+msvc15/build/.vs
 *.opendb
 *.recipe
 *.lastbuildstate

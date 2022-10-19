@@ -2,6 +2,7 @@
 #include <math.h>
 #include <fastsqrt.h>
 #include "sintbl.h"
+#include "game.h"
 
 #ifdef _WIN32
 #define M_PI 3.141592
@@ -204,14 +205,14 @@ void moving_bouncing(float vx, float vy, float x, float y, int w, int h,
 	*bounced = FALSE;
 
 	if ( bouncing == TRUE ) {
-		if(x > SCREEN_W-w) {
-			x = SCREEN_W-w;
+		if(x > LOGICAL_SCREEN_W -w) {
+			x = LOGICAL_SCREEN_W -w;
 			vx *= -1;
 			*bounced = TRUE;
 		}
 
-		if(y > SCREEN_H-h) {
-			y = SCREEN_H-h;
+		if(y > LOGICAL_SCREEN_H -h) {
+			y = LOGICAL_SCREEN_H -h;
 			vy *= -1;
 			*bounced = TRUE;
 		}

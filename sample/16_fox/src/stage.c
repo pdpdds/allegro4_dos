@@ -1,5 +1,6 @@
 #include "stage.h"
 #include "fox.h"
+#include "game.h"
 
 #ifdef _WIN32
 #include <string.h>
@@ -106,7 +107,7 @@ END_OF_FUNCTION(stage_elapsed_time_proc)
 int process_background_scroll(void)
 {
 	// https://www.allegro.cc/forums/thread/473433
-	blit(stage_bg_bitmap, stage_buf_bitmap, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+	blit(stage_bg_bitmap, stage_buf_bitmap, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 
 	// -------------------------------
 	ListIter iter3;
@@ -131,7 +132,7 @@ int process_background_scroll(void)
 
 	list_iter_init(&iter3, scroll_bitmap_list);
 
-	int y = SCREEN_H - height;
+	int y = LOGICAL_SCREEN_H - height;
 	int i = 0;
 	while (1)
 	{
@@ -147,7 +148,7 @@ int process_background_scroll(void)
 		int offset = scroll_offset[i];
 		offset += speed;
 
-		if (offset >= b->w - SCREEN_W) offset = 0;
+		if (offset >= b->w - LOGICAL_SCREEN_W) offset = 0;
 		scroll_offset[i] = offset;
 
 		masked_blit(b, stage_buf_bitmap, offset, 0,
@@ -294,7 +295,7 @@ void launch_enemy_nway_weapon(float x, float y, float speed, int n, int odd)
 void init_fox_ranger()
 {
 	fox_x = 0;
-	fox_y = SCREEN_H / 2 - (fox_bitmap->h / 2);
+	fox_y = LOGICAL_SCREEN_H / 2 - (fox_bitmap->h / 2);
 
 	fox_twinkling_time = stage_elapsed_time;	// 깜빡임 시작 시간
 	fox_twinkling = 0;	// 깜빡임 toggle 변수
@@ -379,8 +380,8 @@ void process_fox_movement(void)
 
 							int offset = rand_number(item_w * -1, item_w);
 							item2->x = fox_cx + offset + item_w;
-							if (item2->x >= SCREEN_W) {
-								item2->x = SCREEN_W - item_w;
+							if (item2->x >= LOGICAL_SCREEN_W) {
+								item2->x = LOGICAL_SCREEN_W - item_w;
 							}
 							else if (item2->x <= 0) {
 								item2->x = 0;
@@ -388,8 +389,8 @@ void process_fox_movement(void)
 
 							offset = rand_number(item_h * -1, item_h);
 							item2->y = fox_cy + offset + item_h;
-							if (item2->y >= SCREEN_H) {
-								item2->y = SCREEN_H - item_h;
+							if (item2->y >= LOGICAL_SCREEN_H) {
+								item2->y = LOGICAL_SCREEN_H - item_h;
 							}
 							else if (item2->y <= 0) {
 								item2->y = 0;
@@ -568,11 +569,11 @@ void process_fox_movement(void)
 
 			// 폭스 레인저 이동 영역 제한
 			if (fox_x <= 0) fox_x = 0;
-			if (fox_x > SCREEN_W - fox_bitmap->w)
-				fox_x = SCREEN_W - fox_bitmap->w;
+			if (fox_x > LOGICAL_SCREEN_W - fox_bitmap->w)
+				fox_x = LOGICAL_SCREEN_W - fox_bitmap->w;
 			if (fox_y <= 0) fox_y = 0;
-			if (fox_y > SCREEN_H - fox_bitmap->h)
-				fox_y = SCREEN_H - fox_bitmap->h;
+			if (fox_y > LOGICAL_SCREEN_H - fox_bitmap->h)
+				fox_y = LOGICAL_SCREEN_H - fox_bitmap->h;
 
 #if 0
 			// ENTER를 누르면 긴급 유도 미사일 발사
@@ -1029,15 +1030,15 @@ void process_show_life_meter(void)
 	int i, x, y;
 
 	x = 2;
-	y = SCREEN_H - fox_life_small_bitmap->h - 2;
+	y = LOGICAL_SCREEN_H - fox_life_small_bitmap->h - 2;
 	draw_sprite(stage_buf_bitmap, fox_life_small_bitmap, x, y);
 	char tmp[10];
 	sprintf(tmp, "%d", fox_life_count);
 	textout_ex(stage_buf_bitmap, font, tmp, fox_life_small_bitmap->w + 4, y, makecol(255, 0, 0), -1);
 
 	int spacing = 1;
-	x = SCREEN_W - (fox_life_heart_bitmap->w * fox_energy_count) - (spacing * fox_energy_count);
-	y = SCREEN_H - fox_life_heart_bitmap->h - 2;
+	x = LOGICAL_SCREEN_W - (fox_life_heart_bitmap->w * fox_energy_count) - (spacing * fox_energy_count);
+	y = LOGICAL_SCREEN_H - fox_life_heart_bitmap->h - 2;
 	for (i = 0; i<fox_energy_count; i++) {
 		draw_sprite(stage_buf_bitmap, fox_life_heart_bitmap, x, y);
 		x += fox_life_heart_bitmap->w;
@@ -1124,13 +1125,13 @@ void process_enemy_movement(void)
 
 			// 초기 위치 셋팅
 			if (!strcasecmp(e->side, "RIGHT")) {
-				enemy->x = SCREEN_W;
+				enemy->x = LOGICAL_SCREEN_W;
 
 				if (e->first_location == -1) {
-					enemy->y = enemy->h + rand() % (SCREEN_H - enemy->h);
+					enemy->y = enemy->h + rand() % (LOGICAL_SCREEN_H - enemy->h);
 				}
 				else {
-					enemy->y = SCREEN_H * first_location / 100;
+					enemy->y = LOGICAL_SCREEN_H * first_location / 100;
 				}
 
 			}
@@ -1138,10 +1139,10 @@ void process_enemy_movement(void)
 				enemy->x = enemy->w * -1;
 
 				if (e->first_location == -1) {
-					enemy->y = enemy->h + rand() % (SCREEN_H - enemy->h);
+					enemy->y = enemy->h + rand() % (LOGICAL_SCREEN_H - enemy->h);
 				}
 				else {
-					enemy->y = SCREEN_H * first_location / 100;
+					enemy->y = LOGICAL_SCREEN_H * first_location / 100;
 				}
 
 			}
@@ -1159,13 +1160,13 @@ void process_enemy_movement(void)
 
 			}
 			else if (!strcasecmp(e->side, "BOTTOM")) {
-				enemy->y = SCREEN_H;
+				enemy->y = LOGICAL_SCREEN_H;
 
 				if (e->first_location == -1) {
-					enemy->x = enemy->w + rand() % (SCREEN_W - enemy->w);
+					enemy->x = enemy->w + rand() % (LOGICAL_SCREEN_W - enemy->w);
 				}
 				else {
-					enemy->x = SCREEN_W * first_location / 100;
+					enemy->x = LOGICAL_SCREEN_W * first_location / 100;
 				}
 
 				enemy->x = enemy->x - (enemy->w / 2);
@@ -1310,7 +1311,7 @@ void process_enemy_movement(void)
 					float new_x, new_y;
 
 					float drop_tx = 0;
-					float drop_ty = SCREEN_H + 50;
+					float drop_ty = LOGICAL_SCREEN_H + 50;
 
 					int diff = stage_elapsed_time - boss_explod_begin_time;
 
@@ -1350,7 +1351,7 @@ void process_enemy_movement(void)
 							fox_bitmap = fox_bitmaps[fox_bitmap_index];
 
 							fox_x = fox_bitmap->w * -1;
-							fox_y = SCREEN_H / 2 - (fox_bitmap->h / 2);
+							fox_y = LOGICAL_SCREEN_H / 2 - (fox_bitmap->h / 2);
 
 							fox_speed = 0.0;
 
@@ -1584,13 +1585,13 @@ void process_enemy_movement(void)
 							int w = fox_item_bitmaps[index]->w;
 							int h = fox_item_bitmaps[index]->h;
 
-							if (x > SCREEN_W - w) {
-								item->x = SCREEN_W - w;
+							if (x > LOGICAL_SCREEN_W - w) {
+								item->x = LOGICAL_SCREEN_W - w;
 								item->dx = -1;
 							}
 
-							if (y > SCREEN_H - h) {
-								item->y = SCREEN_H - h;
+							if (y > LOGICAL_SCREEN_H - h) {
+								item->y = LOGICAL_SCREEN_H - h;
 								item->dy = -1;
 							}
 							// --------------------------------------------------
@@ -1754,8 +1755,8 @@ void process_enemy_movement(void)
 							if (enemy->motion == MOVE_RIGHT_CENTER) {
 								float vy, vx;
 								float angle;
-								float restore_x = SCREEN_W - enemy->w - 3;
-								float restore_y = (SCREEN_H / 2) - (enemy->h / 2);
+								float restore_x = LOGICAL_SCREEN_W - enemy->w - 3;
+								float restore_y = (LOGICAL_SCREEN_H / 2) - (enemy->h / 2);
 								moving_guided(enemy->speed * 4, x, y, restore_x, restore_y,
 									&new_x, &new_y, &vx, &vy, &angle);
 
@@ -1790,8 +1791,8 @@ void process_enemy_movement(void)
 								moving_left(enemy->speed, x, &new_x);
 								new_y = y;
 
-								if (new_x < SCREEN_W - enemy->w - 3) {
-									new_x = SCREEN_W - enemy->w - 3;
+								if (new_x < LOGICAL_SCREEN_W - enemy->w - 3) {
+									new_x = LOGICAL_SCREEN_W - enemy->w - 3;
 									enemy->motion = MOVE_UP;
 									enemy->attack_begin = TRUE;
 								}
@@ -1812,7 +1813,7 @@ void process_enemy_movement(void)
 								new_x = x;
 
 								//if ( new_y > SCREEN_H-(enemy->h/2) ) {
-								if (new_y > SCREEN_H - enemy->h + 10) {
+								if (new_y > LOGICAL_SCREEN_H - enemy->h + 10) {
 									enemy->motion = MOVE_UP;
 								}
 							}
@@ -1971,7 +1972,7 @@ void process_enemy_movement(void)
 						out_of_range = TRUE;
 
 					}
-					else if (new_x >(float)SCREEN_W) {
+					else if (new_x >(float)LOGICAL_SCREEN_W) {
 						out_of_range = TRUE;
 
 					}
@@ -1979,7 +1980,7 @@ void process_enemy_movement(void)
 						out_of_range = TRUE;
 
 					}
-					else if (new_y >(float)SCREEN_H) {
+					else if (new_y >(float)LOGICAL_SCREEN_H) {
 						out_of_range = TRUE;
 
 					}
@@ -2102,7 +2103,7 @@ void process_fox_guided_missile(void)
 		int j;
 
 		// 화면 밖으로 이동 했다면 유도탄 삭제
-		if (!check_collision_bbox(0, 0, SCREEN_W, SCREEN_H, x, y, w, h)) {
+		if (!check_collision_bbox(0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, x, y, w, h)) {
 			list_iter_remove(&iter, NULL);
 			free(weapon);
 			weapon = NULL;
@@ -2445,7 +2446,7 @@ void process_fox_missile(void)
 		int j;
 
 		// 화면 밖으로 이동 했다면 미사일 제거
-		if (!check_collision_bbox(0, 0, SCREEN_W, SCREEN_H, x, y, w, h)) {
+		if (!check_collision_bbox(0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, x, y, w, h)) {
 			list_iter_remove(&iter, NULL);
 			list_remove_all_cb(weapon->x_list, free);
 			list_destroy(weapon->x_list);
@@ -2546,7 +2547,7 @@ void process_enemy_energy_bar(void)
 {
 #if 0
 	int x, y;
-	x = SCREEN_W - fox_enemy_life_bar_bitmap->w;
+	x = LOGICAL_SCREEN_W - fox_enemy_life_bar_bitmap->w;
 	y = 0;
 	draw_sprite(stage_buf_bitmap, fox_enemy_life_bar_bitmap, x, y);
 #endif
@@ -2635,7 +2636,7 @@ void process_fox_weapon(void)
 
 			// -----------------------------------------------
 			// 무기가 화면 밖으로 이동했다면 무기 삭제
-			if (!check_collision_bbox(0, 0, SCREEN_W, SCREEN_H, x, y, w, h)) {
+			if (!check_collision_bbox(0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, x, y, w, h)) {
 				list_iter_remove(&iter, NULL);
 				free(weapon);
 				weapon = NULL;
@@ -2815,7 +2816,7 @@ void process_enemy_weapon(void)
 		}
 		else {
 			// 적이 화면상에 나타났을때 무기 발사
-			if (check_collision_bbox(0, 0, SCREEN_W, SCREEN_H,
+			if (check_collision_bbox(0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H,
 				enemy->x, enemy->y, enemy->w, enemy->h)) {
 
 				// 아군기를 추적하는 적의 경우 추적을 멈추면 더이상 발사하지않음
@@ -2947,7 +2948,7 @@ void process_enemy_weapon(void)
 
 			if (weapon != NULL) {
 				// 적의 무기가 화면 밖으로 이동했다면 무기 삭제
-				if (!check_collision_bbox(0, 0, SCREEN_W, SCREEN_H, weapon_x, weapon_y, weapon_w, weapon_h)) {
+				if (!check_collision_bbox(0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, weapon_x, weapon_y, weapon_w, weapon_h)) {
 					list_iter_remove(&iter, NULL);
 					destroy_bitmap(weapon->bitmap);
 					free(weapon);
@@ -3448,14 +3449,14 @@ void process_popup_message(void)
 {
 	if (stage_popup_bitmap == NULL) return;
 
-	int x = SCREEN_W / 2 - stage_popup_bitmap->w / 2;
-	int y = SCREEN_H / 2 - stage_popup_bitmap->h / 2;
+	int x = LOGICAL_SCREEN_W / 2 - stage_popup_bitmap->w / 2;
+	int y = LOGICAL_SCREEN_H / 2 - stage_popup_bitmap->h / 2;
 
 	// 항상 출력
 	if (fox_popup_message_time == 0) {
 		if (fox_popup_show_emblem == TRUE && stage_emblem_bitmap != NULL) {
-			int x2 = (SCREEN_W / 2) - (stage_emblem_bitmap->w / 2);
-			int y2 = (SCREEN_H / 2) - (stage_emblem_bitmap->h / 2);
+			int x2 = (LOGICAL_SCREEN_W / 2) - (stage_emblem_bitmap->w / 2);
+			int y2 = (LOGICAL_SCREEN_H / 2) - (stage_emblem_bitmap->h / 2);
 			draw_sprite(stage_bitmap, stage_emblem_bitmap, x2, y2);
 		}
 
@@ -3467,8 +3468,8 @@ void process_popup_message(void)
 		long diff = stage_elapsed_time - fox_popup_message_show_time;
 		if (diff < fox_popup_message_time) {
 			if (fox_popup_show_emblem == TRUE && stage_emblem_bitmap != NULL) {
-				int x2 = (SCREEN_W / 2) - (stage_emblem_bitmap->w / 2);
-				int y2 = (SCREEN_H / 2) - (stage_emblem_bitmap->h / 2);
+				int x2 = (LOGICAL_SCREEN_W / 2) - (stage_emblem_bitmap->w / 2);
+				int y2 = (LOGICAL_SCREEN_H / 2) - (stage_emblem_bitmap->h / 2);
 				draw_sprite(stage_bitmap, stage_emblem_bitmap, x2, y2);
 			}
 
@@ -3498,7 +3499,7 @@ void process_debug_message(void)
 	sprintf(life, "L: %03d / F: %02d / E: %02d / W: %02d / H: %02d",
 		fox_energy_count, fps, list_size(enemy_list),
 		list_size(fox_weapon_list), list_size(fox_guided_missile_list));
-	textout_centre_ex(stage_buf_bitmap, font, life, SCREEN_W / 2, SCREEN_H - 12, makecol(255, 0, 0), -1);
+	textout_centre_ex(stage_buf_bitmap, font, life, LOGICAL_SCREEN_W / 2, SCREEN_H - 12, makecol(255, 0, 0), -1);
 }
 
 int load_bitmaps(int stage)
@@ -4026,7 +4027,7 @@ int load_stage_resource(int stage)
 					BITMAP *b2 = copy_sub_bitmap(b, x, y, w, h, 1.0);
 
 					int i = 0;
-					for (i = 0; i<SCREEN_W; i += b2->w) {
+					for (i = 0; i< LOGICAL_SCREEN_W; i += b2->w) {
 						draw_sprite(stage_bg_bitmap, b2, i, 0);
 					}
 
@@ -4070,7 +4071,7 @@ int load_stage_resource(int stage)
 
 					init_gradient();
 					draw_colour_gradient(stage_bg_bitmap, 0, 0,
-						SCREEN_W, SCREEN_H, start_color, end_color, method);
+						LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, start_color, end_color, method);
 				}
 
 				node2 = XMLNode_next_sibling(node2);
@@ -4447,15 +4448,15 @@ int stage_start(int stage)
 		}
 
 		// -------------------------------------------------------
-		blit(stage_buf_bitmap, stage_bitmap, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+		blit(stage_buf_bitmap, stage_bitmap, 0, 0, 0, 0, LOGICAL_SCREEN_W, SCREEN_H);
 
 		process_popup_message();
 
 		acquire_screen();
-		blit(stage_bitmap, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+		blit(stage_bitmap, screen, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 		release_screen();
 
-		if(stage_clear_flag == TRUE && fox_x > SCREEN_W)
+		if(stage_clear_flag == TRUE && fox_x > LOGICAL_SCREEN_W)
 		{
 			stage++;
 			break;

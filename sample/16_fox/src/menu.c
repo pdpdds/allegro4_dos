@@ -1,5 +1,6 @@
 #include "MENU.H"
 #include "fox.h"
+#include "game.h"
 
 #ifdef _MSC_VER 
 //not #if defined(_WIN32) || defined(_WIN64) because we have strncasecmp in mingw
@@ -37,7 +38,7 @@ static void load_callback(DATAFILE *dat)
 	static const char indicator[] = "-\\|/-";
 	static int current = 0;
 
-	textprintf_centre_ex(screen, font, SCREEN_W/2, SCREEN_H/2, 
+	textprintf_centre_ex(screen, font, LOGICAL_SCREEN_W /2, LOGICAL_SCREEN_H/2,
 			makecol(255, 255, 255), 0,
 			"Loading %c", indicator[current]);
 	current++;
@@ -50,10 +51,10 @@ int menu(void)
 	int choice = MENU_STATE_INTRO;
 	int x, y;
 
-	BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *buffer = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(buffer);
 	
-	BITMAP *bg = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *bg = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(bg);
 
 	BITMAP *intro = 0;
@@ -137,7 +138,7 @@ int menu(void)
 		while (update_count > 0) {
 			acquire_bitmap(buffer);
 			
-			blit(bg, buffer, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+			blit(bg, buffer, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 
 			if(option.debug) {
 				show_available_memory(buffer, 0, 0);
@@ -146,8 +147,8 @@ int menu(void)
 			update_starfield(buffer, 2);
 			//update_starfield_horizontal(buffer);
 
-			x = (SCREEN_W/2) - (fox->w/2);
-			y = (SCREEN_H/2) - (fox->h/2);
+			x = (LOGICAL_SCREEN_W /2) - (fox->w/2);
+			y = (LOGICAL_SCREEN_H /2) - (fox->h/2);
 			//draw_sprite(bg, fox, x, y);
 					
 			x = 70;
@@ -163,8 +164,8 @@ int menu(void)
 				list_get_at(menu_list, i, (void*) &v);
 				char *text = (char*)v;
 
-				int x = SCREEN_W/2;
-				int y = (SCREEN_H/2)-(menu_height/2) + (i*16) + pady;
+				int x = LOGICAL_SCREEN_W /2;
+				int y = (LOGICAL_SCREEN_H /2)-(menu_height/2) + (i*16) + pady;
 				int text_color;
 
 				if ( i == choice ) {
@@ -231,7 +232,7 @@ int menu(void)
 				}
 			}
 
-			blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+			blit(buffer, screen, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 		}
 
 	}

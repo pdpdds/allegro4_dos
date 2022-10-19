@@ -28,13 +28,13 @@ extern int free_bitmaps(void);
 int StartStage(int stageNum)
 {
 	// -------------------------------------------------------
-	stage_bg_bitmap = create_bitmap(SCREEN_W, SCREEN_H);
+	stage_bg_bitmap = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(stage_bg_bitmap);
 
-	stage_buf_bitmap = create_bitmap(SCREEN_W, SCREEN_H);
+	stage_buf_bitmap = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(stage_buf_bitmap);
 
-	stage_bitmap = create_bitmap(SCREEN_W, SCREEN_H);
+	stage_bitmap = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(stage_bitmap);
 	// ---------------------------------
 #ifdef USE_DATAFILE
@@ -90,8 +90,8 @@ int StartStage(int stageNum)
 	load_stage_resource(stageNum);
 
 	// -----------------
-	fox_damage_bitmap = create_bitmap(SCREEN_W, SCREEN_H);
-	rectfill(fox_damage_bitmap, 0, 0, SCREEN_W, SCREEN_H, makecol(255, 0, 0));
+	fox_damage_bitmap = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
+	rectfill(fox_damage_bitmap, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, makecol(255, 0, 0));
 
 	load_enemy_advent(stageNum);
 

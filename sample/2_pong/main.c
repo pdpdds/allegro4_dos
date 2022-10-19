@@ -459,8 +459,8 @@
       /* SWAP BUFFERS */
       blit(screen2, screen, 0, 0, 0, 0, screen->w, screen->h);
 
-      /* - END OF LOOP - */
    }
+      /* - END OF LOOP - */
 
    /* TERMINATE PROGRAM */
    allegro_exit();

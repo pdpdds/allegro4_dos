@@ -1,6 +1,7 @@
 #include "OPENING.H"
 #include "OPTION.H"
 #include "DAT.H"
+#include "game.h"
 
 #ifdef _MSC_VER 
 //not #if defined(_WIN32) || defined(_WIN64) because we have strncasecmp in mingw
@@ -22,7 +23,7 @@ static void load_callback(DATAFILE *dat)
 	static const char indicator[] = "-\\|/-";
 	static int current = 0;
 
-	textprintf_centre_ex(screen, font, SCREEN_W/2, SCREEN_H/2, 
+	textprintf_centre_ex(screen, font, LOGICAL_SCREEN_W /2, LOGICAL_SCREEN_H /2,
 			makecol(255, 255, 255), makecol(0, 0, 0), 
 			"Loading %c", indicator[current]);
 	current++;
@@ -34,7 +35,7 @@ int opening(void)
 {
 	clear_keybuf();
 
-	BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *buffer = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(buffer);
 		
 	BITMAP *bg = 0;
@@ -90,11 +91,11 @@ int opening(void)
 
 	float scale = 0.1;
 	BITMAP *fox_resized = resize_bitmap(fox, scale);
-	int x = (SCREEN_W/2) - (fox_resized->w/2);
-	int y = (SCREEN_H/2) - (fox_resized->h/2);
+	int x = (LOGICAL_SCREEN_W /2) - (fox_resized->w/2);
+	int y = (LOGICAL_SCREEN_H /2) - (fox_resized->h/2);
 	int loop = TRUE;
 	
-	int title_x = SCREEN_W;
+	int title_x = LOGICAL_SCREEN_W;
 	float title_accel = 0.0;
 	int title_loop = FALSE;
 	
@@ -102,7 +103,7 @@ int opening(void)
 	float title_accel2 = 0.0;
 	int title_loop2 = FALSE;
 	
-	int title_x3 = SCREEN_W;
+	int title_x3 = LOGICAL_SCREEN_W;
 	float title_accel3 = 0.0;
 	int title_loop3 = FALSE;
 	
@@ -117,7 +118,7 @@ int opening(void)
 		while (update_count > 0) {
 			acquire_bitmap(buffer);
 
-			blit(bg, buffer, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+			blit(bg, buffer, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 
 			//show_available_memory(buffer);
 
@@ -135,8 +136,8 @@ int opening(void)
 				destroy_bitmap(fox_resized);
 				fox_resized = resize_bitmap(fox, scale);
 
-				x = (SCREEN_W/2) - (fox_resized->w/2);
-				y = (SCREEN_H/2) - (fox_resized->h/2);
+				x = (LOGICAL_SCREEN_W /2) - (fox_resized->w/2);
+				y = (LOGICAL_SCREEN_H /2) - (fox_resized->h/2);
 				
 				if ( scale >= 1.0 ) {
 					loop = FALSE;
@@ -172,8 +173,8 @@ int opening(void)
 
 #if 0
 			if ( title_loop3 == TRUE ) {
-				if ( (SCREEN_W-title_www->w)/2 >= title_x3 ) {
-					title_x3 = (SCREEN_W-title_www->w)/2;
+				if ( (LOGICAL_SCREEN_W -title_www->w)/2 >= title_x3 ) {
+					title_x3 = (LOGICAL_SCREEN_W -title_www->w)/2;
 					title_loop3 = FALSE;
 				} else {
 					title_x3-=(int)title_accel3;

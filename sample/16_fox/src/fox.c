@@ -209,7 +209,7 @@ int setup(void)
 	
 	set_color_depth(8);
 #ifdef _WIN32
-	if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 320, 200, 0, 0) != 0) {
+	if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 640, 480, 0, 0) != 0) {
 #else
     if (set_gfx_mode(GFX_VGA, 320, 200, 0, 0) != 0) {
 #endif
@@ -229,7 +229,7 @@ void load_data_callback(DATAFILE *dat)
 	static const char indicator[] = "-\\|/-";
 	static int current = 0;
 
-	textprintf_centre_ex(screen, font, SCREEN_W / 2, SCREEN_H / 2, makecol(255, 255, 255), 0, "Loading %c", indicator[current]);
+	textprintf_centre_ex(screen, font, LOGICAL_SCREEN_W / 2, LOGICAL_SCREEN_H / 2, makecol(255, 255, 255), 0, "Loading %c", indicator[current]);
 	current++;
 	if (!indicator[current])
 		current = 0;

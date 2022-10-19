@@ -1,6 +1,7 @@
 #include "EFFECT.H"
 #include "sintbl.h"
 #include "tool.h"
+#include "game.h"
 
 // https://www.allegro.cc/forums/thread/598750/787856#target
 
@@ -126,8 +127,8 @@ struct snow_flake *create_snow_flake(struct snow_flake *parent)
 
 	// place the snow in a random place on the screen
 
-	tmp->x = (float)(rand()%(SCREEN_W+20))-20;
-	tmp->y = (float)(rand()%(SCREEN_H+20))-20;
+	tmp->x = (float)(rand()%(LOGICAL_SCREEN_W +20))-20;
+	tmp->y = (float)(rand()%(LOGICAL_SCREEN_H +20))-20;
 
 	// decide speed and direction of this snow of snow
 	r = (float)(rand()%15)/15+1;  // notice the snow is much slower than the rain was
@@ -257,8 +258,8 @@ void init_effect_starfield(int num)
 	int i;
 	for(i=0; i<num; i++) {
 		STAR *star = malloc(sizeof(STAR));
-		star->xpos = (random ()%(SCREEN_W*2))-(SCREEN_W);
-		star->ypos = (random ()%(SCREEN_H*2))-(SCREEN_H);
+		star->xpos = (random ()%(LOGICAL_SCREEN_W *2))-(LOGICAL_SCREEN_W);
+		star->ypos = (random ()%(LOGICAL_SCREEN_H *2))-(LOGICAL_SCREEN_H);
 		star->zpos = ((random ()%(STARDEPTH-2))+2);
 		//star->color = STAR_COLOR_END-(rand()%STAR_COLOR_NUM);
 		int color = rand_number(0, 2);
@@ -298,8 +299,8 @@ void update_starfield(BITMAP *b, int timegap)
 			j--;
 		}
 
-		x = SCREEN_W/2 + (STARDIST*star->xpos/star->zpos);
-		y = SCREEN_H/2 + (STARDIST*star->ypos/star->zpos);
+		x = LOGICAL_SCREEN_W /2 + (STARDIST*star->xpos/star->zpos);
+		y = LOGICAL_SCREEN_H /2 + (STARDIST*star->ypos/star->zpos);
 		//putpixel(b, x, y, 32-((int)(star->zpos/64.0))+star->color);
 		putpixel(b, x, y, star->color);
 		star->oldx2 = star->oldx;
@@ -475,8 +476,8 @@ void init_effect_starfield_horizontal(int num)
 	for (i=0;i<num;i++)
 	{
 		STAR_HORIZONTAL *star = malloc(sizeof(STAR_HORIZONTAL));
-		star->x = rand()%SCREEN_W;
-		star->y = rand()%SCREEN_H;
+		star->x = rand()% LOGICAL_SCREEN_W;
+		star->y = rand()% LOGICAL_SCREEN_H;
 		star->z = rand()%3+1;
 		int color = rand_number(0, 2);
 		if (color == 0)
@@ -510,7 +511,7 @@ void update_starfield_horizontal(BITMAP *b)
 		
 		putpixel(b, x, y, star->color);
 		star->x += star->z;
-		if(x > SCREEN_W-1) 
+		if(x > LOGICAL_SCREEN_W -1)
 			star->x = 0;
 	}
 }

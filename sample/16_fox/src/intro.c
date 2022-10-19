@@ -7,6 +7,7 @@
 #include "TOOL.H"
 #include "OPTION.H"
 #include "DAT.H"
+#include "game.h"
 
 #ifdef _MSC_VER 
 //not #if defined(_WIN32) || defined(_WIN64) because we have strncasecmp in mingw
@@ -47,7 +48,7 @@ static void load_callback(DATAFILE *dat)
 	static const char indicator[] = "-\\|/-";
 	static int current = 0;
 
-	textprintf_centre_ex(screen, font, SCREEN_W/2, SCREEN_H/2, 
+	textprintf_centre_ex(screen, font, LOGICAL_SCREEN_W /2, LOGICAL_SCREEN_H /2,
 			makecol(255, 255, 255), 0,
 			"Loading %c", indicator[current]);
 	current++;
@@ -223,12 +224,12 @@ int intro(void)
 {
 	clear_keybuf();
 
-	BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *buffer = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(buffer);
 
 	long show_text_time = get_time_ms();
 	
-	BITMAP *bg = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *bg = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(bg);
 
 #ifdef USE_DATAFILE
@@ -311,7 +312,7 @@ int intro(void)
 		while (update_count > 0) {
 			acquire_bitmap(buffer);
 
-			blit(bg, buffer, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+			blit(bg, buffer, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 
 			if (list_size(text_list) == 0) {
 				void *v;
@@ -356,7 +357,7 @@ int intro(void)
 					sprintf(tmp, "RES/INTRO/%s", scene->bitmap);
 					bg_bitmap = load_bitmap(tmp, pal);
 #endif
-					blit(bg_bitmap, bg, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+					blit(bg_bitmap, bg, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 
 				} else {
 					bg_changed = FALSE;
@@ -467,7 +468,7 @@ int intro(void)
 					memset(tmp, '\0', 2048);
 					memcpy(tmp, display_text, 2048);
 
-					int pady = SCREEN_H-(max_row*16);
+					int pady = LOGICAL_SCREEN_H -(max_row*16);
 
 					int j=0;
 					char *p;
@@ -475,7 +476,7 @@ int intro(void)
 					while (p != NULL)
 					{
 						al_han_textout_centre_ex(buffer, p, 
-								SCREEN_W/2, pady+(j*16), makecol(255,255,255));
+							LOGICAL_SCREEN_W /2, pady+(j*16), makecol(255,255,255));
 						p = strtok (NULL, "\n");
 						j++;
 					}
@@ -500,7 +501,7 @@ int intro(void)
 				set_pallete(black_pallete);
 
 			acquire_screen();
-			blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+			blit(buffer, screen, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 			release_screen();
 
 			if ( bg_changed == TRUE )
@@ -618,20 +619,20 @@ int intro(void)
 
 			if (sprite == 0) {
 				fox_padx = 0.0;
-				fox_y2 = SCREEN_H - 95;
+				fox_y2 = LOGICAL_SCREEN_H - 95;
 			}
 
 			BITMAP *spr = launch_bitmaps[sprite];
 
-			int x = (SCREEN_W/2) - (spr->w/2);
-			int y = (SCREEN_H/2) - (spr->h/2);
+			int x = (LOGICAL_SCREEN_W /2) - (spr->w/2);
+			int y = (LOGICAL_SCREEN_H /2) - (spr->h/2);
 
 			draw_sprite(buffer, spr, x, y);
 
 			if ( loop_count == 1 ) {
 				if(fox_count-1 > fox_i) {
 					BITMAP *resized_fox = fox_new_bitmaps[fox_i];
-					fox_x2 = (SCREEN_W/2) - ((float)resized_fox->w/2);
+					fox_x2 = (LOGICAL_SCREEN_W /2) - ((float)resized_fox->w/2);
 					fox_x2+=fox_padx;
 					draw_sprite(buffer, resized_fox, (int)fox_x2, (int)fox_y2);
 
@@ -665,7 +666,7 @@ int intro(void)
 
 			// -------------------------------------------------------
 			acquire_screen();
-			blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+			blit(buffer, screen, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 			release_screen();
 
 			if (exit_loop == TRUE) break;

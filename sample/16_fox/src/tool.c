@@ -1,4 +1,5 @@
 #include "TOOL.H"
+#include "game.h"
 
 #ifdef _WIN32
 
@@ -588,7 +589,7 @@ void fade_in_new(BITMAP *bmp_orig, int speed)
 {
    BITMAP *bmp_buff;
 
-    if ((bmp_buff = create_bitmap(SCREEN_W, SCREEN_H)))
+    if ((bmp_buff = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H)))
     {
         int a;
         if (speed <= 0) speed = 16;
@@ -599,24 +600,24 @@ void fade_in_new(BITMAP *bmp_orig, int speed)
             set_trans_blender(0,0,0,a);
             draw_trans_sprite(bmp_buff, bmp_orig, 0, 0);
             vsync();
-            blit(bmp_buff, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
+            blit(bmp_buff, screen, 0,0, 0,0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
         }
         destroy_bitmap(bmp_buff);
     } 
 
-    blit(bmp_orig, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
+    blit(bmp_orig, screen, 0,0, 0,0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 }
 
 void fade_out_new(int speed)
 {
     BITMAP *bmp_orig, *bmp_buff;
 
-    if ((bmp_orig = create_bitmap(SCREEN_W, SCREEN_H)))
+    if ((bmp_orig = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H)))
     {
-        if ((bmp_buff = create_bitmap(SCREEN_W, SCREEN_H)))
+        if ((bmp_buff = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H)))
         {
             int a;
-            blit(screen, bmp_orig, 0,0, 0,0, SCREEN_W, SCREEN_H);
+            blit(screen, bmp_orig, 0,0, 0,0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
             if (speed <= 0) speed = 16;
         
             for (a = 255-speed; a > 0; a-=speed)
@@ -625,14 +626,14 @@ void fade_out_new(int speed)
                 set_trans_blender(0,0,0,a);
                 draw_trans_sprite(bmp_buff, bmp_orig, 0, 0);
                 vsync();
-                blit(bmp_buff, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
+                blit(bmp_buff, screen, 0,0, 0,0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
             }
             destroy_bitmap(bmp_buff);
         }
         destroy_bitmap(bmp_orig);
     }
 
-    rectfill(screen, 0,0, SCREEN_W,SCREEN_H, makecol(0,0,0));
+    rectfill(screen, 0,0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H, makecol(0,0,0));
 }
 
 void capture_screen(BITMAP *bmp)
@@ -675,12 +676,12 @@ int show_bitmap(BITMAP *b, PALETTE pal)
 {
 	clear_keybuf();
 
-	BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+	BITMAP *buffer = create_bitmap(LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	clear(buffer);
 	
 	acquire_screen();
 	set_pallete(black_pallete);
-	blit(b, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+	blit(b, screen, 0, 0, 0, 0, LOGICAL_SCREEN_W, LOGICAL_SCREEN_H);
 	release_screen();
 	
 	//set_palette(pal);

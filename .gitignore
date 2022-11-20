@@ -29,4 +29,5 @@ Debug/
 *.SWP
 *.o
 *.ipch
+*.txt
 sample/28_agup/lib/release/libagup.a
